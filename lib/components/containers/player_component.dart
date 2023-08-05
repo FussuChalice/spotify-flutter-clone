@@ -22,6 +22,7 @@ class _PlayerComponentState extends State<PlayerComponent> {
   bool _songLikeClicked = false;
 
   bool _audioPlayerRandomClicked = false;
+  bool _audioPlayerLoopClicked = false;
   bool _audioPlayerStarted = false;
 
   @override
@@ -182,7 +183,37 @@ class _PlayerComponentState extends State<PlayerComponent> {
                         height: 32, width: 32, 
                         startPlayerButtonIconPath: audioPlayerStartIcon, 
                         stopPlayerButtonIconPath: audioPlayerStopIcon
-                      )
+                      ),
+                      const SizedBox(width: 25,),
+                      CustomIconButtonComponent(
+                        iconPath: audioPlayerNextIcon, 
+                        iconButtonOnTapFunction: () {}, 
+                        focusedColor: focusedElementColor, 
+                        unfocusedColor: unfocusedElementColor, 
+                        iconButtonHoverFunction: () {}, 
+                        iconHeight: 16, 
+                        blendMode: BlendMode.modulate
+                      ),
+                      const SizedBox(width: 25,),
+                      DotIndicatorBox(
+                        clicked: _audioPlayerLoopClicked, 
+                        paddingToIndicator: 4, 
+                        paddingFromTop: 6,
+                        clickedColor: clickedIconColor,
+                        child: CustomIconButtonComponent(
+                          iconPath: audioPlayerLoopIcon, 
+                          iconButtonOnTapFunction: () {
+                            setState(() {
+                              _audioPlayerLoopClicked = !_audioPlayerLoopClicked;
+                            });
+                          },
+                          blendMode: BlendMode.modulate,
+                          focusedColor: _audioPlayerLoopClicked ? clickedHoveredIconColor: focusedElementColor, 
+                          unfocusedColor: _audioPlayerLoopClicked ? clickedIconColor : unfocusedElementColor, 
+                          iconButtonHoverFunction: () {}, 
+                          iconHeight: 16
+                        )
+                      ),
                     ],
                   )
                 ],

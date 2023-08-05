@@ -4,8 +4,10 @@ const String imagesPath = "assets/images/";
 // Icons
 const String addIconAsset = "${iconsPath}add_icon.png";
 const String audioPlayerRandomIcon = "${iconsPath}audio_player_random_icon.png";
+const String audioPlayerLoopIcon = "${iconsPath}audio_player_loop_icon.png";
 const String audioPlayerStartIcon = "${iconsPath}audio_player_start_icon.png";
 const String audioPlayerStopIcon = "${iconsPath}audio_player_stop_icon.png";
+const String audioPlayerNextIcon = "${iconsPath}audio_player_next_icon.png";
 const String arrowIconAsset = "${iconsPath}arrow_icon.png";
 const String audioPlayerBackIconAsset = "${iconsPath}audio_player_back_icon.png";
 const String dotsIconAsset = "${iconsPath}dots_icon.png";
