@@ -1,0 +1,642 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Spotify 1.1.91.582.gbed508e8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-25 10:06+0000\n"
+"PO-Revision-Date: 2022-07-25 10:06+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "%@ — %@"
+msgstr "%@ — %@"
+
+msgid "&About Spotify"
+msgstr "&О Spotify"
+
+msgid "&Copy"
+msgstr "&Копировать"
+
+msgid "&Delete"
+msgstr "&Удалить"
+
+msgid "&Develop"
+msgstr "Ра&зработка"
+
+msgid "&Edit"
+msgstr "&Правка"
+
+msgid "&File"
+msgstr "&Файл"
+
+msgid "&Friend Activity"
+msgstr "&Лента друзей"
+
+msgid "&Help"
+msgstr "&Справка"
+
+msgid "&Log Out"
+msgstr "&Выйти из аккаунта"
+
+msgid "Create your first playlist"
+msgstr "Создай свой первый плейлист"
+
+msgid "&Minimize to Tray"
+msgstr "Све&рнуть в область уведомлений"
+
+msgid "&Next"
+msgstr "&Далее"
+
+msgid "&Paste"
+msgstr "В&ставить"
+
+msgid "&Pause"
+msgstr "&Пауза"
+
+msgid "&Play"
+msgstr "&Включить"
+
+msgid "&Playback"
+msgstr "В&оспроизведение"
+
+msgid "&Redo"
+msgstr "&Повторить"
+
+msgid "&Repeat"
+msgstr "П&овторять"
+
+msgid "&Reset Zoom"
+msgstr "&Сбросить масштаб"
+
+msgid "&Show Spotify"
+msgstr "По&казать Spotify"
+
+msgid "&Shuffle"
+msgstr "&Перемешать"
+
+msgid "&Undo"
+msgstr "&Отменить"
+
+msgid "&View"
+msgstr "&Вид"
+
+msgid ""
+"A new Spotify upgrade is available, but the automatic upgrade failed. The "
+"reason could be that Spotify was installed with another user account. You "
+"can continue using the current version or manually reinstall using the link "
+"below."
+msgstr ""
+"Для Spotify доступно обновление, но выполнить его автоматически не удалось. "
+"Возможно, приложение Spotify было установлено через аккаунт другого "
+"пользователя. Ты можешь использовать текущую версию Spotify или перейти по "
+"ссылке ниже и переустановить программу вручную."
+
+msgid "About Spotify"
+msgstr "О Spotify"
+
+msgid "Actual Size"
+msgstr "Фактический размер"
+
+msgid "It's easy, we'll help you"
+msgstr "Это совсем не сложно! Мы поможем."
+
+msgid "All Files"
+msgstr "Все файлы"
+
+msgid "Are you sure you want to disable hardware acceleration?"
+msgstr "Отключить аппаратное ускорение?"
+
+msgid ""
+"Are you sure you want to disable hardware acceleration?\n"
+"\n"
+"This will disable the use of the graphics processor (GPU) in your computer, "
+"which can sometimes solve graphics issues, but can also make Spotify slower "
+"when redrawing the screen.\n"
+"\n"
+"For this setting to take effect, you need to restart Spotify."
+msgstr ""
+"Отключить аппаратное ускорение?\n"
+"\n"
+"Приложению будет запрещено использовать графический процессор компьютера. "
+"Иногда это помогает решить проблемы с графикой, однако не исключено, что "
+"изображение на экране в Spotify станет обновляться медленнее.\n"
+"\n"
+"Чтобы изменения вступили в силу, перезапусти Spotify."
+
+msgid "Are you sure you want to enable hardware acceleration?"
+msgstr "Включить аппаратное ускорение?"
+
+msgid ""
+"Are you sure you want to enable hardware acceleration?\n"
+"\n"
+"This will enable the use of the graphics processor (GPU) in your computer, "
+"which can make Spotify faster when redrawing the screen, but can also in "
+"rare cases introduce graphics issues.\n"
+"\n"
+"For this setting to take effect, you need to restart Spotify."
+msgstr ""
+"Включить аппаратное ускорение?\n"
+"\n"
+"Это позволит приложению использовать графический процессор компьютера. "
+"Возможно, изображение на экране в Spotify станет обновляться быстрее, однако "
+"не исключено, что возникнут проблемы с графикой.\n"
+"\n"
+"Чтобы изменения вступили в силу, перезапусти Spotify."
+
+msgid "Audio Files"
+msgstr "Аудио"
+
+msgid "Bring All to Front"
+msgstr "Показать все окна"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Collect logs"
+msgstr "Сбор логов"
+
+msgid "Copy"
+msgstr "Копировать"
+
+msgid "Cu&t"
+msgstr "&Вырезать"
+
+msgid "Custom Files"
+msgstr "Пользовательские файлы"
+
+msgid "Cut"
+msgstr "Вырезать"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Develop"
+msgstr "Разработка"
+
+msgid "Disable and Restart"
+msgstr "Отключить и перезапустить"
+
+msgid "Do not show this message again"
+msgstr "Больше не показывать это сообщение"
+
+msgid "E&xit"
+msgstr "&Закрыть"
+
+msgid "Edit"
+msgstr "Изменить"
+
+msgid "Emoji & Symbols"
+msgstr "Эмодзи и символы"
+
+msgid "Enable and Restart"
+msgstr "Включить и перезапустить"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "Filter"
+msgstr "Фильтр"
+
+msgid "Friend Activity"
+msgstr "Лента друзей"
+
+msgid "Go Back"
+msgstr "Назад"
+
+msgid "Go Forward"
+msgstr "Вперед"
+
+msgid "Hardware Acceleration"
+msgstr "Аппаратное ускорение"
+
+msgid "Help"
+msgstr "Справка"
+
+msgid "Hide Others"
+msgstr "Скрыть остальное"
+
+msgid "Hide Spotify"
+msgstr "Скрыть Spotify"
+
+msgid "Image Files"
+msgstr "Изображения"
+
+msgid ""
+"It seems like the Spotify Updater wasn't able to start properly. Do you want "
+"to wait a bit more?"
+msgstr "Установщику Spotify не удалось начать работу. Подождать еще немного?"
+
+msgid "Licensing Information"
+msgstr "О лицензиях"
+
+msgid "Log Out"
+msgstr "Выйти"
+
+msgid "Log in with Facebook"
+msgstr "Войти через Facebook"
+
+msgid "Migrating Spotify Cache"
+msgstr "Переносим кеш Spotify…"
+
+msgid "Migrating your Spotify data..."
+msgstr "Переносим данные…"
+
+msgid "Minimize"
+msgstr "Свернуть"
+
+msgid "New Playlist"
+msgstr "Создать плейлист"
+
+msgid "New Playlist Folder"
+msgstr "Новая папка с плейлистами"
+
+msgid "Let's find some podcasts to follow"
+msgstr "Подпишись на интересные подкасты"
+
+msgid "We'll keep you updated on new episodes"
+msgstr "Ты будешь узнавать о новых выпусках."
+
+msgid "Browse podcasts"
+msgstr "Обзор"
+
+msgid "Next"
+msgstr "Далее"
+
+msgid "Offline Mode"
+msgstr "Офлайн-режим"
+
+msgid "Open File"
+msgstr "Открыть файл"
+
+msgid "P&references..."
+msgstr "&Настройки…"
+
+msgid "P&revious"
+msgstr "&Назад"
+
+msgid "Paste"
+msgstr "Вставить"
+
+msgid "Pause"
+msgstr "Пауза"
+
+msgid "Play"
+msgstr "Слушать"
+
+msgid "Playback"
+msgstr "Воспроизведение"
+
+msgid "Preferences"
+msgstr "Настройки"
+
+msgid "Previous"
+msgstr "Назад"
+
+msgid "Private Session"
+msgstr "Приватный режим"
+
+msgid "Quit Spotify"
+msgstr "Выйти из Spotify"
+
+msgid "Recently Played"
+msgstr "Недавно прослушано"
+
+msgid "Redo"
+msgstr "Повторить"
+
+msgid "Repeat"
+msgstr "Повторять"
+
+msgid "Restart Spotify"
+msgstr "Перезапустить Spotify"
+
+msgid "SCTA Information"
+msgstr "Об акте SCTA"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "Seek Backward"
+msgstr "Перемотать назад"
+
+msgid "Seek Forward"
+msgstr "Перемотать вперед"
+
+msgid "Select &All"
+msgstr "В&ыбрать все"
+
+msgid "Select All"
+msgstr "Выбрать все"
+
+msgid "Services"
+msgstr "Сервисы"
+
+msgid "Show All"
+msgstr "Показать все"
+
+msgid "Shuffle"
+msgstr "Перемешать"
+
+msgid "Skip"
+msgstr "Пропустить"
+
+msgid "Spotify"
+msgstr "Spotify"
+
+msgid "Spotify &Community"
+msgstr "&Сообщество Spotify"
+
+msgid "Spotify &Help"
+msgstr "&Справка Spotify"
+
+msgid "Spotify Community"
+msgstr "Сообщество Spotify"
+
+msgid "Spotify Failed to Upgrade"
+msgstr "Не удалось обновить Spotify"
+
+msgid "Spotify Help"
+msgstr "Справка Spotify"
+
+msgid "Spotify failed to migrate some of your data."
+msgstr "Некоторые данные не удалось перенести."
+
+msgid "Spotify needs your permission to install an update."
+msgstr "Для установки обновления Spotify требуется разрешение."
+
+msgid "The cache contains local copies of music data, playlists and album art."
+msgstr ""
+"В кеше хранятся локальные копии или фрагменты музыкальных файлов, а также "
+"плейлисты и обложки альбомов."
+
+msgid "Third-party Software"
+msgstr "Стороннее ПО"
+
+msgid ""
+"This will disable the use of the graphics processor (GPU) in your computer, "
+"which can sometimes solve graphics issues, but can also make Spotify slower "
+"when redrawing the screen.\n"
+"\n"
+"For this setting to take effect, you need to restart Spotify."
+msgstr ""
+"После этого приложение не сможет использовать графический процессор "
+"компьютера. Возможно, это устранит проблемы с графикой. При этом не "
+"исключено, что изображение на экране в Spotify станет обновляться "
+"медленнее.\n"
+"\n"
+"Чтобы изменения вступили в силу, перезапусти Spotify."
+
+msgid ""
+"This will enable the use of the graphics processor (GPU) in your computer, "
+"which can make Spotify faster when redrawing the screen, but can also in "
+"rare cases introduce graphics issues.\n"
+"\n"
+"For this setting to take effect, you need to restart Spotify."
+msgstr ""
+"Это позволит приложению использовать графический процессор компьютера. "
+"Возможно, после этого изображение на экране в Spotify станет обновляться "
+"быстрее, но могут возникнуть проблемы с графикой.\n"
+"\n"
+"Чтобы изменения вступили в силу, перезапусти Spotify."
+
+msgid "Undo"
+msgstr "Отменить"
+
+msgid "Video Files"
+msgstr "Видео"
+
+msgid "View"
+msgstr "Открыть"
+
+msgid "Volume &Down"
+msgstr "Сделать &тише"
+
+msgid "Volume &Up"
+msgstr "Сделать &громче"
+
+msgid "Volume Down"
+msgstr "Сделать тише"
+
+msgid "Volume Up"
+msgstr "Сделать громче"
+
+msgid "Window"
+msgstr "Окно"
+
+msgid "Your &Account"
+msgstr "Мой &аккаунт"
+
+msgid "Your Library"
+msgstr "Моя медиатека"
+
+msgid "Your Account"
+msgstr "Мой аккаунт"
+
+msgid "Zoom"
+msgstr "Масштаб"
+
+msgid "Zoom &In"
+msgstr "У&величить"
+
+msgid "Zoom &Out"
+msgstr "У&меньшить"
+
+msgid "Zoom In"
+msgstr "Увеличить"
+
+msgid "Zoom Out"
+msgstr "Уменьшить"
+
+msgctxt "sClientInfoPlistOsxNSDownloadsFolderUsageDescription"
+msgid ""
+"Spotify will scan your Downloads folder for audio files. You will find them "
+"in the side navigation, if you enable Local Files in Spotify's settings."
+msgstr ""
+"Spotify проверит, есть ли треки в папке «Скачивания». Чтобы они появились на "
+"боковой панели навигации, включи параметр «Файлы на устройстве» в настройках "
+"приложения."
+
+msgctxt "sInstallerInfoPlistOsxCFBundleDisplayName"
+msgid "Spotify Installer"
+msgstr "Установщик Spotify"
+
+msgctxt "sInstallerInfoPlistOsxCFBundleName"
+msgid "Spotify Installer"
+msgstr "Установщик Spotify"
+
+msgctxt "sInstallerOsxAskUserToAuthenticate."
+msgid "Spotify needs permission to install."
+msgstr "Для установки Spotify требуется разрешение."
+
+msgctxt "sInstallerOsxAskUserToQuitSpotify"
+msgid "Please quit Spotify and try again"
+msgstr "Выйди из Spotify и попробуй еще раз"
+
+msgctxt "sInstallerOsxContinueInBackground"
+msgid "Continue in background"
+msgstr "Продолжить в фоновом режиме"
+
+msgctxt "sInstallerOsxDownloadFailedErrorDescription"
+msgid "An error occurred while trying to download Spotify."
+msgstr "При скачивании Spotify произошла ошибка."
+
+msgctxt "sInstallerOsxDownloadFailedRetryIn"
+msgid "Download failed. Retrying in %ds."
+msgstr "Не удалось скачать данные. Мы повторим попытку через %1$d сек."
+
+msgctxt "sInstallerOsxDownloadingSpotify"
+msgid "Downloading Spotify…"
+msgstr "Скачиваем Spotify…"
+
+msgctxt "sInstallerOsxExtractionFailedErrorDescription"
+msgid "An error occurred while trying to extract Spotify."
+msgstr "При извлечении Spotify произошла ошибка."
+
+msgctxt "sInstallerOsxGenericErrorDescription"
+msgid "An error occurred while trying to install Spotify."
+msgstr "При установке Spotify произошла ошибка."
+
+msgctxt "sInstallerOsxInstallFailedErrorDescription"
+msgid "An error occurred while trying to install Spotify."
+msgstr "При установке Spotify произошла ошибка."
+
+msgctxt "sInstallerOsxInstallationFailed"
+msgid "Installation Failed"
+msgstr "Ошибка установки"
+
+msgctxt "sInstallerOsxInstallationFailedDefaultButtonTitle"
+msgid "Download from Spotify.com"
+msgstr "Скачать с сайта spotify.com"
+
+msgctxt "sInstallerOsxInstallationIncompleteContinueButtonTitle"
+msgid "Continue Installation"
+msgstr "Продолжить установку"
+
+msgctxt "sInstallerOsxInstallationIncompleteDesc"
+msgid ""
+"The installation of Spotify is almost complete. Do you really want to quit?"
+msgstr "Установка Spotify почти завершена. Хочешь прервать ее?"
+
+msgctxt "sInstallerOsxInstallationIncompleteTitle"
+msgid "Installation Incomplete"
+msgstr "Установка не завершена"
+
+msgctxt "sInstallerOsxInstallingSpotify"
+msgid "Installing Spotify…"
+msgstr "Устанавливаем Spotify…"
+
+msgctxt "sInstallerOsxMMAboutInstallSpotify"
+msgid "About Install Spotify"
+msgstr "Об установщике Spotify"
+
+msgctxt "sInstallerOsxMMBringAllToFront"
+msgid "Bring All to Front"
+msgstr "Показать все окна"
+
+msgctxt "sInstallerOsxMMHelp"
+msgid "Help"
+msgstr "Справка"
+
+msgctxt "sInstallerOsxMMHideInstallSpotify"
+msgid "Hide Install Spotify"
+msgstr "Скрыть установщик Spotify"
+
+msgctxt "sInstallerOsxMMHideOthers"
+msgid "Hide Others"
+msgstr "Скрыть остальное"
+
+msgctxt "sInstallerOsxMMInstallSpotify"
+msgid "Install Spotify"
+msgstr "Установщик Spotify"
+
+msgctxt "sInstallerOsxMMInstallSpotifyHelp"
+msgid "Install Spotify Help"
+msgstr "Справка"
+
+msgctxt "sInstallerOsxMMMinimize"
+msgid "Minimize"
+msgstr "Свернуть"
+
+msgid "Home"
+msgstr "Главная"
+
+msgctxt "sInstallerOsxMMQuitInstallSpotify"
+msgid "Quit Install Spotify"
+msgstr "Выйти из установщика Spotify"
+
+msgctxt "sInstallerOsxMMServices"
+msgid "Services"
+msgstr "Сервисы"
+
+msgctxt "sInstallerOsxMMShowAll"
+msgid "Show All"
+msgstr "Показать все"
+
+msgctxt "sInstallerOsxMMWindow"
+msgid "Window"
+msgstr "Окно"
+
+msgctxt "sInstallerOsxMMZoom"
+msgid "Zoom"
+msgstr "Масштаб"
+
+msgctxt "sInstallerOsxMountFailedErrorDescription"
+msgid ""
+"An error occurred while trying to mount the downloaded Spotify disk image."
+msgstr "При подключении скачанного образа Spotify произошла ошибка."
+
+msgctxt "sInstallerOsxMoveApplicationButtonDoNotMove"
+msgid "Do not move"
+msgstr "Не переносить"
+
+msgctxt "sInstallerOsxMoveApplicationButtonMove"
+msgid "Move to Applications folder"
+msgstr "Перенести в папку «Программы»"
+
+msgctxt "sInstallerOsxMoveApplicationCouldNotMove"
+msgid "Could not move to Applications folder"
+msgstr "Не удалось перенести в папку «Программы»"
+
+msgctxt "sInstallerOsxMoveApplicationQuestionInfoInDownloadsFolder"
+msgid "This will keep your Downloads folder uncluttered."
+msgstr "Это поможет тебе поддерживать порядок в папке «Скачивания»."
+
+msgctxt "sInstallerOsxMoveApplicationQuestionInfoWillRequirePasswd"
+msgid "Note that this will require an administrator password."
+msgstr "Примечание. Потребуется ввести пароль администратора."
+
+msgctxt "sInstallerOsxMoveApplicationQuestionMessage"
+msgid "I can move myself to the Applications folder if you'd like."
+msgstr "Установщик можно перенести в папку «Программы»."
+
+msgctxt "sInstallerOsxMoveApplicationQuestionTitle"
+msgid "Move to Applications folder?"
+msgstr "Перенести в папку «Программы»?"
+
+msgctxt "sInstallerOsxMoveApplicationQuestionTitleHome"
+msgid "Move to Applications folder in your Home folder?"
+msgstr "Перенести в папку пользователя > «Программы»?"
+
+msgctxt "sInstallerOsxQuitButtonTitle"
+msgid "Quit"
+msgstr "Выйти"
+
+msgctxt "sInstallerOsxUnsupportedPlatformDesc"
+msgid "Sorry, this version of Spotify is for macOS %s or later."
+msgstr "Эта версия Spotify работает с macOS %1$s или выше."
+
+msgctxt "sInstallerOsxUnsupportedPlatformHelp"
+msgid "Find installers for older versions"
+msgstr "Установить другую версию"
+
+msgctxt "sInstallerOsxUnsupportedPlatformTitle"
+msgid "Unsupported Platform"
+msgstr "Платформа не поддерживается"

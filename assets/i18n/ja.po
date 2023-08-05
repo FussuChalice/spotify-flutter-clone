@@ -1,0 +1,641 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Spotify 1.1.94.667.ga2a1a44b\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-07 01:07+0000\n"
+"PO-Revision-Date: 2022-09-07 01:07+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "%@ — %@"
+msgstr "%@ー%@"
+
+msgid "&About Spotify"
+msgstr "Spotifyについて"
+
+msgid "&Copy"
+msgstr "コピー(&C)"
+
+msgid "Home"
+msgstr "ホーム"
+
+msgid "&Delete"
+msgstr "削除(&D)"
+
+msgid "It's easy, we'll help you"
+msgstr "作り方は簡単。私たちがお手伝いします"
+
+msgid "Let's find some podcasts to follow"
+msgstr "フォローしたいポッドキャストを探そう"
+
+msgid "We'll keep you updated on new episodes"
+msgstr "新着エピソードをいち早くチェックできます"
+
+msgid "Browse podcasts"
+msgstr "ポッドキャストをブラウズ"
+
+msgid "Create your first playlist"
+msgstr "初めてのプレイリストを作ろう"
+
+msgid "Your Library"
+msgstr "マイライブラリ"
+
+msgid "&Develop"
+msgstr "開発(&D)"
+
+msgid "&Edit"
+msgstr "編集"
+
+msgid "&File"
+msgstr "ファイル"
+
+msgid "&Friend Activity"
+msgstr "& 友達のアクティビティ"
+
+msgid "&Help"
+msgstr "ヘルプ(&H)"
+
+msgid "&Log Out"
+msgstr "ログアウト"
+
+msgid "&Minimize to Tray"
+msgstr "トレイに最小化(&M)"
+
+msgid "&Next"
+msgstr "次へ(&N)"
+
+msgid "&Paste"
+msgstr "貼り付け(&P)"
+
+msgid "&Pause"
+msgstr "一時停止(&P)"
+
+msgid "&Play"
+msgstr "再生(&P)"
+
+msgid "&Playback"
+msgstr "再生"
+
+msgid "&Redo"
+msgstr "やり直し"
+
+msgid "&Repeat"
+msgstr "繰り返し(&R)"
+
+msgid "&Reset Zoom"
+msgstr "ズームのリセット"
+
+msgid "&Show Spotify"
+msgstr "Spotifyを表示"
+
+msgid "&Shuffle"
+msgstr "シャッフル(&S)"
+
+msgid "&Undo"
+msgstr "元に戻す"
+
+msgid "&View"
+msgstr "表示"
+
+msgid ""
+"A new Spotify upgrade is available, but the automatic upgrade failed. The "
+"reason could be that Spotify was installed with another user account. You "
+"can continue using the current version or manually reinstall using the link "
+"below."
+msgstr ""
+"新しいSpotifyのアップグレードを利用できますが、自動アップグレードに失敗しまし"
+"た。このエラーは、Spotifyが別のユーザーアカウントを使用してインストールされて"
+"いるために発生した可能性があります。現在のバージョンを引き続き利用すること"
+"も、以下のリンクを使用して手動で再インストールすることもできます。"
+
+msgid "About Spotify"
+msgstr "Spotifyについて"
+
+msgid "Actual Size"
+msgstr "実際のサイズ"
+
+msgid "All Files"
+msgstr "すべてのファイル"
+
+msgid "Are you sure you want to disable hardware acceleration?"
+msgstr "ハードウェアアクセラレーションを無効にしますか？"
+
+msgid ""
+"Are you sure you want to disable hardware acceleration?\n"
+"\n"
+"This will disable the use of the graphics processor (GPU) in your computer, "
+"which can sometimes solve graphics issues, but can also make Spotify slower "
+"when redrawing the screen.\n"
+"\n"
+"For this setting to take effect, you need to restart Spotify."
+msgstr ""
+"ハードウェアアクセラレーションを無効にしますか？\n"
+"\n"
+"無効にするとパソコンのグラフィックプロセッサー (GPU) が機能しなくなります。そ"
+"の結果、グラフィック機能に関する問題を解決できる場合もありますが、Spotify の"
+"動作が遅くなります。\n"
+"\n"
+"この変更を適用するには、Spotify を再起動してください。"
+
+msgid "Are you sure you want to enable hardware acceleration?"
+msgstr "ハードウェアアクセラレーションを有効にしますか？"
+
+msgid ""
+"Are you sure you want to enable hardware acceleration?\n"
+"\n"
+"This will enable the use of the graphics processor (GPU) in your computer, "
+"which can make Spotify faster when redrawing the screen, but can also in "
+"rare cases introduce graphics issues.\n"
+"\n"
+"For this setting to take effect, you need to restart Spotify."
+msgstr ""
+"ハードウェアアクセラレーションを有効にしますか？\n"
+"\n"
+"有効にするとパソコンのグラフィックプロセッサー (GPU) が機能するようになりま"
+"す。その結果、Spotify の動作は速くなりますが、グラフィック機能に関する問題が"
+"発生する場合があります。\n"
+"\n"
+"この変更を適用するには、Spotify を再起動してください。"
+
+msgid "Audio Files"
+msgstr "オーディオファイル"
+
+msgid "Bring All to Front"
+msgstr "すべてを手前に移動"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Close"
+msgstr "閉じる"
+
+msgid "Collect logs"
+msgstr "ログを収集する"
+
+msgid "Copy"
+msgstr "コピー"
+
+msgid "Cu&t"
+msgstr "切り取り(&T)"
+
+msgid "Custom Files"
+msgstr "カスタムファイル"
+
+msgid "Cut"
+msgstr "カット"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Develop"
+msgstr "開発"
+
+msgid "Disable and Restart"
+msgstr "無効にして再起動"
+
+msgid "Do not show this message again"
+msgstr "このメッセージを今後は表示しない"
+
+msgid "E&xit"
+msgstr "終了"
+
+msgid "Edit"
+msgstr "編集"
+
+msgid "Emoji & Symbols"
+msgstr "絵文字とシンボル"
+
+msgid "Enable and Restart"
+msgstr "有効にして再起動"
+
+msgid "File"
+msgstr "ファイル"
+
+msgid "Filter"
+msgstr "フィルター"
+
+msgid "Friend Activity"
+msgstr "友達のアクティビティ"
+
+msgid "Go Back"
+msgstr "戻る"
+
+msgid "Go Forward"
+msgstr "進む"
+
+msgid "Hardware Acceleration"
+msgstr "ハードウェア高速化"
+
+msgid "Help"
+msgstr "ヘルプ"
+
+msgid "Hide Others"
+msgstr "ほかを隠す"
+
+msgid "Hide Spotify"
+msgstr "Spotifyを隠す"
+
+msgid "Image Files"
+msgstr "画像ファイル"
+
+msgid ""
+"It seems like the Spotify Updater wasn't able to start properly. Do you want "
+"to wait a bit more?"
+msgstr "Spotify Updater が正しく起動しませんでした。少し待ちますか？"
+
+msgid "Licensing Information"
+msgstr "ライセンス情報"
+
+msgid "Log Out"
+msgstr "ログアウト"
+
+msgid "Log in with Facebook"
+msgstr "Facebookアカウントでログインする"
+
+msgid "Migrating Spotify Cache"
+msgstr "Spotifyキャッシュの移動中"
+
+msgid "Migrating your Spotify data..."
+msgstr "お客さまのSpotifyデータを移行中…"
+
+msgid "Minimize"
+msgstr "しまう"
+
+msgid "New Playlist"
+msgstr "新規プレイリスト"
+
+msgid "New Playlist Folder"
+msgstr "新規プレイリストフォルダ"
+
+msgid "Next"
+msgstr "次へ"
+
+msgid "Offline Mode"
+msgstr "オフラインモード"
+
+msgid "Open File"
+msgstr "ファイルを開く"
+
+msgid "P&references..."
+msgstr "環境設定..."
+
+msgid "P&revious"
+msgstr "前へ(&R)"
+
+msgid "Paste"
+msgstr "ペースト"
+
+msgid "Pause"
+msgstr "一時停止"
+
+msgid "Play"
+msgstr "曲の再生"
+
+msgid "Playback"
+msgstr "曲の再生"
+
+msgid "Preferences"
+msgstr "環境設定"
+
+msgid "Previous"
+msgstr "前へ"
+
+msgid "Private Session"
+msgstr "プライベートセッション"
+
+msgid "Quit Spotify"
+msgstr "Spotifyを終了"
+
+msgid "Recently Played"
+msgstr "最近再生したコンテンツ"
+
+msgid "Redo"
+msgstr "取り消す"
+
+msgid "Repeat"
+msgstr "繰り返し"
+
+msgid "Restart Spotify"
+msgstr "Spotifyを再起動"
+
+msgid "SCTA Information"
+msgstr "特定商取引法に基づく表示"
+
+msgid "Search"
+msgstr "検索"
+
+msgid "Seek Backward"
+msgstr "5秒戻る"
+
+msgid "Seek Forward"
+msgstr "5秒進む"
+
+msgid "Select &All"
+msgstr "すべて選択(&A)"
+
+msgid "Select All"
+msgstr "すべてを選択"
+
+msgid "Services"
+msgstr "サービス"
+
+msgid "Show All"
+msgstr "すべて表示"
+
+msgid "Shuffle"
+msgstr "シャッフル"
+
+msgid "Skip"
+msgstr "スキップ"
+
+msgid "Spotify"
+msgstr "Spotify"
+
+msgid "Spotify &Community"
+msgstr "Spotifyコミュニティ"
+
+msgid "Spotify &Help"
+msgstr "Spotifyヘルプ"
+
+msgid "Spotify Community"
+msgstr "Spotify Community"
+
+msgid "Spotify Failed to Upgrade"
+msgstr "Spotifyのアップグレードに失敗しました"
+
+msgid "Spotify Help"
+msgstr "Spotify Help"
+
+msgid "Spotify failed to migrate some of your data."
+msgstr "お客さまのデータの一部を移行できませんでした。"
+
+msgid "Spotify needs your permission to install an update."
+msgstr "Spotify を最新の状態にアップデートするためにお客さまの許可が必要です。"
+
+msgid "The cache contains local copies of music data, playlists and album art."
+msgstr ""
+"キャッシュには、音楽データ、プレイリスト、およびアルバムアートのローカルのコ"
+"ピーが含まれます。"
+
+msgid "Third-party Software"
+msgstr "サードパーティー製ソフトウェア"
+
+msgid ""
+"This will disable the use of the graphics processor (GPU) in your computer, "
+"which can sometimes solve graphics issues, but can also make Spotify slower "
+"when redrawing the screen.\n"
+"\n"
+"For this setting to take effect, you need to restart Spotify."
+msgstr ""
+"無効にするとパソコンのグラフィックプロセッサー (GPU) が機能しなくなります。そ"
+"の結果、グラフィック機能に関する問題を解決できる場合もありますが、Spotify の"
+"動作が遅くなります。\n"
+"\n"
+"この変更を適用するには、Spotify を再起動してください。"
+
+msgid ""
+"This will enable the use of the graphics processor (GPU) in your computer, "
+"which can make Spotify faster when redrawing the screen, but can also in "
+"rare cases introduce graphics issues.\n"
+"\n"
+"For this setting to take effect, you need to restart Spotify."
+msgstr ""
+"有効にするとパソコンのグラフィックプロセッサー (GPU) が機能するようになりま"
+"す。その結果、Spotify の動作は速くなりますが、グラフィック機能に関する問題が"
+"発生する場合があります。\n"
+"\n"
+"この変更を適用するには、Spotify を再起動してください。"
+
+msgid "Undo"
+msgstr "元に戻す"
+
+msgid "Video Files"
+msgstr "ビデオファイル"
+
+msgid "View"
+msgstr "表示"
+
+msgid "Volume &Down"
+msgstr "音量を下げる(&D)"
+
+msgid "Volume &Up"
+msgstr "音量を上げる(&U)"
+
+msgid "Volume Down"
+msgstr "音量を下げる"
+
+msgid "Volume Up"
+msgstr "音量を上げる"
+
+msgid "Window"
+msgstr "ウインドウ"
+
+msgid "Your &Account"
+msgstr "ユーザーアカウント"
+
+msgid "Your Account"
+msgstr "アカウント"
+
+msgid "Zoom"
+msgstr "拡大"
+
+msgid "Zoom &In"
+msgstr "ズームイン"
+
+msgid "Zoom &Out"
+msgstr "ズームアウト"
+
+msgid "Zoom In"
+msgstr "拡大"
+
+msgid "Zoom Out"
+msgstr "縮小"
+
+msgctxt "sClientInfoPlistOsxNSDownloadsFolderUsageDescription"
+msgid ""
+"Spotify will scan your Downloads folder for audio files. You will find them "
+"in the side navigation, if you enable Local Files in Spotify's settings."
+msgstr ""
+"承認すると、ダウンロードファイルのオーディオフォルダーを Spotify がスキャンし"
+"ます。Spotify の設定から [ローカルファイルを表示する] を有効に切り替えると、"
+"横のメニューに表示されます。"
+
+msgctxt "sInstallerInfoPlistOsxCFBundleDisplayName"
+msgid "Spotify Installer"
+msgstr "Spotifyインストーラ"
+
+msgctxt "sInstallerInfoPlistOsxCFBundleName"
+msgid "Spotify Installer"
+msgstr "Spotifyインストーラ"
+
+msgctxt "sInstallerOsxAskUserToAuthenticate."
+msgid "Spotify needs permission to install."
+msgstr "インストールするにはお客さまの許可が必要です。"
+
+msgctxt "sInstallerOsxAskUserToQuitSpotify"
+msgid "Please quit Spotify and try again"
+msgstr "Spotifyの使用を中止し、再試行してください。"
+
+msgctxt "sInstallerOsxContinueInBackground"
+msgid "Continue in background"
+msgstr "バックグラウンドで続行"
+
+msgctxt "sInstallerOsxDownloadFailedErrorDescription"
+msgid "An error occurred while trying to download Spotify."
+msgstr "Spotifyのダウンロード中にエラーが発生しました。"
+
+msgctxt "sInstallerOsxDownloadFailedRetryIn"
+msgid "Download failed. Retrying in %ds."
+msgstr "ダウンロードに失敗しました。%1$d秒後にもう一度トライします。"
+
+msgctxt "sInstallerOsxDownloadingSpotify"
+msgid "Downloading Spotify…"
+msgstr "Spotifyをダウンロードしています…"
+
+msgctxt "sInstallerOsxExtractionFailedErrorDescription"
+msgid "An error occurred while trying to extract Spotify."
+msgstr "Spotifyの解凍中にエラーが発生しました。"
+
+msgctxt "sInstallerOsxGenericErrorDescription"
+msgid "An error occurred while trying to install Spotify."
+msgstr "Spotifyのインストール中にエラーが発生しました。"
+
+msgctxt "sInstallerOsxInstallFailedErrorDescription"
+msgid "An error occurred while trying to install Spotify."
+msgstr "Spotifyのインストール中にエラーが発生しました。"
+
+msgctxt "sInstallerOsxInstallationFailed"
+msgid "Installation Failed"
+msgstr "インストールが失敗しました"
+
+msgctxt "sInstallerOsxInstallationFailedDefaultButtonTitle"
+msgid "Download from Spotify.com"
+msgstr "Spotify.comからダウンロード"
+
+msgctxt "sInstallerOsxInstallationIncompleteContinueButtonTitle"
+msgid "Continue Installation"
+msgstr "インストールを続行"
+
+msgctxt "sInstallerOsxInstallationIncompleteDesc"
+msgid ""
+"The installation of Spotify is almost complete. Do you really want to quit?"
+msgstr "Spotifyのインストールは間もなく完了します。 本当に中止しますか?"
+
+msgctxt "sInstallerOsxInstallationIncompleteTitle"
+msgid "Installation Incomplete"
+msgstr "インストールが完了しませんでした"
+
+msgctxt "sInstallerOsxInstallingSpotify"
+msgid "Installing Spotify…"
+msgstr "Spotifyをインストールしています…"
+
+msgctxt "sInstallerOsxMMAboutInstallSpotify"
+msgid "About Install Spotify"
+msgstr "Spotifyのインストールについて"
+
+msgctxt "sInstallerOsxMMBringAllToFront"
+msgid "Bring All to Front"
+msgstr "すべてを手前に移動"
+
+msgctxt "sInstallerOsxMMHelp"
+msgid "Help"
+msgstr "ヘルプ"
+
+msgctxt "sInstallerOsxMMHideInstallSpotify"
+msgid "Hide Install Spotify"
+msgstr "Spotifyのインストールを非表示にする"
+
+msgctxt "sInstallerOsxMMHideOthers"
+msgid "Hide Others"
+msgstr "ほかを隠す"
+
+msgctxt "sInstallerOsxMMInstallSpotify"
+msgid "Install Spotify"
+msgstr "Spotifyをインストール"
+
+msgctxt "sInstallerOsxMMInstallSpotifyHelp"
+msgid "Install Spotify Help"
+msgstr "Spotifyのインストールに関するヘルプ"
+
+msgctxt "sInstallerOsxMMMinimize"
+msgid "Minimize"
+msgstr "しまう"
+
+msgctxt "sInstallerOsxMMQuitInstallSpotify"
+msgid "Quit Install Spotify"
+msgstr "Spotifyのインストールを中止"
+
+msgctxt "sInstallerOsxMMServices"
+msgid "Services"
+msgstr "サービス"
+
+msgctxt "sInstallerOsxMMShowAll"
+msgid "Show All"
+msgstr "すべて表示"
+
+msgctxt "sInstallerOsxMMWindow"
+msgid "Window"
+msgstr "ウインドウ"
+
+msgctxt "sInstallerOsxMMZoom"
+msgid "Zoom"
+msgstr "拡大"
+
+msgctxt "sInstallerOsxMountFailedErrorDescription"
+msgid ""
+"An error occurred while trying to mount the downloaded Spotify disk image."
+msgstr ""
+"ダウンロードしたSpotifyディスクイメージの実装中にエラーが発生しました。"
+
+msgctxt "sInstallerOsxMoveApplicationButtonDoNotMove"
+msgid "Do not move"
+msgstr "移動しない"
+
+msgctxt "sInstallerOsxMoveApplicationButtonMove"
+msgid "Move to Applications folder"
+msgstr "アプリケーションフォルダに移動"
+
+msgctxt "sInstallerOsxMoveApplicationCouldNotMove"
+msgid "Could not move to Applications folder"
+msgstr "アプリケーションフォルダに移動できませんでした"
+
+msgctxt "sInstallerOsxMoveApplicationQuestionInfoInDownloadsFolder"
+msgid "This will keep your Downloads folder uncluttered."
+msgstr "これでダウンロードフォルダが常に整理されます。"
+
+msgctxt "sInstallerOsxMoveApplicationQuestionInfoWillRequirePasswd"
+msgid "Note that this will require an administrator password."
+msgstr "これには管理者のパスワードが必要となりますのでご注意ください。"
+
+msgctxt "sInstallerOsxMoveApplicationQuestionMessage"
+msgid "I can move myself to the Applications folder if you'd like."
+msgstr "必要な場合はSpotifyが自動でアプリケーションフォルダに移動します。"
+
+msgctxt "sInstallerOsxMoveApplicationQuestionTitle"
+msgid "Move to Applications folder?"
+msgstr "アプリケーションフォルダに移動しますか?"
+
+msgctxt "sInstallerOsxMoveApplicationQuestionTitleHome"
+msgid "Move to Applications folder in your Home folder?"
+msgstr "ホームフォルダのアプリケーションフォルダに移動しますか?"
+
+msgctxt "sInstallerOsxQuitButtonTitle"
+msgid "Quit"
+msgstr "中止する"
+
+msgctxt "sInstallerOsxUnsupportedPlatformDesc"
+msgid "Sorry, this version of Spotify is for macOS %s or later."
+msgstr "このSpotifyのバージョンは、macOS%1$s以降向けです。"
+
+msgctxt "sInstallerOsxUnsupportedPlatformHelp"
+msgid "Find installers for older versions"
+msgstr "以前のバージョン向けインストーラーを探す"
+
+msgctxt "sInstallerOsxUnsupportedPlatformTitle"
+msgid "Unsupported Platform"
+msgstr "サポートされていないプラットフォーム"

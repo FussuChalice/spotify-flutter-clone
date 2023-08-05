@@ -1,0 +1,50 @@
+name: spotify_flutter
+description: Spotify on Flutter.
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.5 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  bitsdojo_window: ^0.1.5
+  provider: ^6.0.5
+  marquee: ^2.2.3
+
+  cupertino_icons: ^1.0.2
+  gettext_i18n: ^1.0.5
+  flutter_localizations:
+    sdk: flutter
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/i18n/
+
+  fonts:
+    - family: CircularSp
+      fonts:
+        - asset: assets/fonts/CircularSp-Cyrl-Bold.ttf
+    - family: CircularSp-Book
+      fonts:
+        - asset: assets/fonts/CircularSp-Cyrl-Book.ttf
+
+ 
+
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
