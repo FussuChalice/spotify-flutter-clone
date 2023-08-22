@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-class CustomWhiteElevatedButtonComponent extends StatefulWidget {
-  const CustomWhiteElevatedButtonComponent({super.key, required this.elevatedButtonText});
+class WhiteElevatedButton extends StatefulWidget {
+  const WhiteElevatedButton({super.key, required this.elevatedButtonText});
 
   final Text elevatedButtonText;
 
   @override
-  State<CustomWhiteElevatedButtonComponent> createState() => _CustomWhiteElevatedButtonComponentState();
+  State<WhiteElevatedButton> createState() => _CustomWhiteElevatedButtonState();
 }
 
-class _CustomWhiteElevatedButtonComponentState extends State<CustomWhiteElevatedButtonComponent> {
+class _CustomWhiteElevatedButtonState extends State<WhiteElevatedButton> {
   bool _addPlayListWhiteButtonHovered = false;
   
   @override

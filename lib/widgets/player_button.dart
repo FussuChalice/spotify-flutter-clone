@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 typedef PlayerButtonCallback = void Function();
 
-class PlayerButtonComponent extends StatefulWidget {
-  const PlayerButtonComponent({
+class PlayerButton extends StatefulWidget {
+  const PlayerButton({
     super.key, 
     required this.startFunction, 
     required this.stopFunction, 
@@ -27,10 +27,10 @@ class PlayerButtonComponent extends StatefulWidget {
   final String stopPlayerButtonIconPath;
 
   @override
-  State<PlayerButtonComponent> createState() => _PlayerButtonComponentState();
+  State<PlayerButton> createState() => _PlayerButtonState();
 }
 
-class _PlayerButtonComponentState extends State<PlayerButtonComponent> {
+class _PlayerButtonState extends State<PlayerButton> {
   bool _buttonHovered = false;
 
   @override

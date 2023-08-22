@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_flutter/assets.dart';
-import 'package:spotify_flutter/components/dot_indicator_box.dart';
-import 'package:spotify_flutter/components/player_button.dart';
-import 'package:spotify_flutter/styles/colors.dart';
+import 'package:spotify_flutter/colors.dart';
+import 'package:spotify_flutter/widgets/custom_icon_button.dart';
+import 'package:spotify_flutter/widgets/dot_indicator_box.dart';
+import 'package:spotify_flutter/widgets/player_button.dart';
+import 'package:spotify_flutter/widgets/timeline.dart';
 
-import '../custom_iconbutton_component.dart';
 
-class PlayerComponent extends StatefulWidget {
-  const PlayerComponent({super.key});
+class PlayerBottomLayout extends StatefulWidget {
+  const PlayerBottomLayout({super.key});
 
   @override
-  State<PlayerComponent> createState() => _PlayerComponentState();
+  State<PlayerBottomLayout> createState() => _PlayerBottomLayoutState();
 }
 
-class _PlayerComponentState extends State<PlayerComponent> {
+class _PlayerBottomLayoutState extends State<PlayerBottomLayout> {
   String songTitle = "Song Title";
   String songAuthor = "Song Author";
 
@@ -111,7 +112,7 @@ class _PlayerComponentState extends State<PlayerComponent> {
                         ),
                       )
                     ),
-                    CustomIconButtonComponent(
+                    CustomIconButton(
                       iconPath: _songLikeClicked ? likeFilledIconAsset: likeUnfilledIconAsset, 
                       iconButtonOnTapFunction: () {
                         setState(() {
@@ -141,7 +142,7 @@ class _PlayerComponentState extends State<PlayerComponent> {
                         paddingToIndicator: 4, 
                         paddingFromTop: 6,
                         clickedColor: clickedIconColor,
-                        child: CustomIconButtonComponent(
+                        child: CustomIconButton(
                           iconPath: audioPlayerRandomIcon, 
                           iconButtonOnTapFunction: () {
                             setState(() {
@@ -156,7 +157,7 @@ class _PlayerComponentState extends State<PlayerComponent> {
                         )
                       ),
                       const SizedBox(width: 25,),
-                      CustomIconButtonComponent(
+                      CustomIconButton(
                         iconPath: audioPlayerBackIconAsset, 
                         iconButtonOnTapFunction: () {}, 
                         focusedColor: focusedElementColor, 
@@ -166,7 +167,7 @@ class _PlayerComponentState extends State<PlayerComponent> {
                         blendMode: BlendMode.modulate
                       ),
                       const SizedBox(width: 25,),
-                      PlayerButtonComponent(
+                      PlayerButton(
                         startFunction: () {
                           setState(() {
                             _audioPlayerStarted = !_audioPlayerStarted;
@@ -178,14 +179,14 @@ class _PlayerComponentState extends State<PlayerComponent> {
                           });
                         }, 
                         buttonIsClicked: _audioPlayerStarted, 
-                        playerButtonColor: unfocusedElementColor, 
-                        playerButtonHoveredColor: focusedElementColor, 
+                        playerButtonColor: Colors.white, 
+                        playerButtonHoveredColor: Colors.white, 
                         height: 32, width: 32, 
                         startPlayerButtonIconPath: audioPlayerStartIcon, 
                         stopPlayerButtonIconPath: audioPlayerStopIcon
                       ),
                       const SizedBox(width: 25,),
-                      CustomIconButtonComponent(
+                      CustomIconButton(
                         iconPath: audioPlayerNextIcon, 
                         iconButtonOnTapFunction: () {}, 
                         focusedColor: focusedElementColor, 
@@ -200,7 +201,7 @@ class _PlayerComponentState extends State<PlayerComponent> {
                         paddingToIndicator: 4, 
                         paddingFromTop: 6,
                         clickedColor: clickedIconColor,
-                        child: CustomIconButtonComponent(
+                        child: CustomIconButton(
                           iconPath: audioPlayerLoopIcon, 
                           iconButtonOnTapFunction: () {
                             setState(() {
@@ -215,7 +216,8 @@ class _PlayerComponentState extends State<PlayerComponent> {
                         )
                       ),
                     ],
-                  )
+                  ),
+                  const Timeline(),
                 ],
               ),
             ),

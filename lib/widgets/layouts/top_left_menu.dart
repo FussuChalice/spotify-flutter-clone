@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_flutter/assets.dart';
-import 'package:spotify_flutter/styles/colors.dart';
-import 'package:spotify_flutter/styles/container_decorations.dart';
 import 'package:gettext_i18n/gettext_i18n.dart';
+import 'package:spotify_flutter/colors.dart';
+import 'package:spotify_flutter/widgets/shell.dart';
 
-class TopLeftMenuComponent extends StatefulWidget {
+class TopLeftMenuLayout extends StatefulWidget {
   
-  const TopLeftMenuComponent({Key? key, required this.mode}) : super(key: key);
+  const TopLeftMenuLayout({Key? key, required this.mode}) : super(key: key);
 
   final int mode;
 
   @override
-  State<TopLeftMenuComponent> createState() => _TopLeftMenuComponentState();
+  State<TopLeftMenuLayout> createState() => _TopLeftMenuLayoutState();
 }
 
-class _TopLeftMenuComponentState extends State<TopLeftMenuComponent> {
+class _TopLeftMenuLayoutState extends State<TopLeftMenuLayout> {
   String _selectedOption = "home";
   bool _homeHovered = false;
   bool _searchHovered = false;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: globalWrapperDecoration,
+    return Shell(
       height: 112,
       child: Padding(
         padding: const EdgeInsets.only(left: 26, top: 10, bottom: 13),

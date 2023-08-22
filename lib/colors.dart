@@ -2,11 +2,11 @@ import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
 
 const Color windowBackgroundColor = Color.fromRGBO(0, 0, 0, 1);
-const Color componentWrapperColor = Color.fromRGBO(18, 18, 18, 1);
+const Color shellColor = Color.fromRGBO(18, 18, 18, 1);
 const Color focusedElementColor = Color.fromRGBO(255, 255, 255, 1);
 const Color unfocusedElementColor = Color.fromRGBO(189, 189, 189, 1);
 const Color hoveredBackgroundElementColor = Color.fromRGBO(33, 33, 33, 1);
-const Color infoContainerColor = Color.fromRGBO(36, 36, 36, 1);
+const Color infoBoxColor = Color.fromRGBO(36, 36, 36, 1);
 const Color clickedIconColor = Color.fromRGBO(28, 202, 90, 1);
 const Color clickedHoveredIconColor = Color.fromRGBO(33, 233, 103, 1);
 

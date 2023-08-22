@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 typedef IconButtonCallback = void Function();
 
-class CustomIconButtonComponent extends StatefulWidget {
-  const CustomIconButtonComponent({
+class CustomIconButton extends StatefulWidget {
+  const CustomIconButton({
     Key? key,
     required this.iconPath,
     required this.iconButtonOnTapFunction, 
@@ -23,10 +23,10 @@ class CustomIconButtonComponent extends StatefulWidget {
   final IconButtonCallback iconButtonHoverFunction;
 
   @override
-  State<CustomIconButtonComponent> createState() => _CustomIconButtonComponentState();
+  State<CustomIconButton> createState() => _IconButtonState();
 }
 
-class _CustomIconButtonComponentState extends State<CustomIconButtonComponent> {
+class _IconButtonState extends State<CustomIconButton> {
   bool _buttonHovered = false;
 
   @override
