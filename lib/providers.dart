@@ -13,8 +13,8 @@ class MenuModeProvider extends ChangeNotifier {
 
 
 class TrackTimeProvider extends ChangeNotifier {
-  Duration _trackTimeLength = Duration.zero;
-  Duration _currentTrackTime = Duration.zero;
+  Duration _trackTimeLength = const Duration(minutes: 0, seconds: 0);
+  Duration _currentTrackTime = const Duration(minutes: 0, seconds: 0);
 
   Duration get trackTimeLength => _trackTimeLength;
   Duration get currentTrackTime => _currentTrackTime;
@@ -27,5 +27,11 @@ class TrackTimeProvider extends ChangeNotifier {
   void setCurrentTrackTime(Duration currentTrackTime) {
     _currentTrackTime = currentTrackTime;
     notifyListeners();
+  }
+
+  String formatDuration(Duration duration) {
+    final minutes = duration.inMinutes.remainder(60).toString().padLeft(2, '0');
+    final seconds = duration.inSeconds.remainder(60).toString().padLeft(2, '0');
+    return '$minutes:$seconds';
   }
 }

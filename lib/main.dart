@@ -15,8 +15,15 @@ import 'package:spotify_flutter/widgets/window.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider<MenuModeProvider>(
-      create: (context) => MenuModeProvider(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<MenuModeProvider>(
+          create: (context) => MenuModeProvider(),
+        ),
+        ChangeNotifierProvider<TrackTimeProvider>(
+          create: (context) => TrackTimeProvider(),
+        ),
+      ],
       child: const MyApp(),
     ),
   );
@@ -53,7 +60,7 @@ class _MyAppState extends State<MyApp> {
 
     return MaterialApp(
       // App localization
-      supportedLocales: ['en','ja','ru'].map((l) => Locale(l)),
+      supportedLocales: const [Locale('en'), Locale('ja'), Locale('ru')],
       localizationsDelegates: [
         GettextLocalizationsDelegate(defaultLanguage: 'en'),
         GlobalMaterialLocalizations.delegate,
