@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:spotify_flutter/colors.dart';
 import 'package:spotify_flutter/providers.dart';
 import 'package:spotify_flutter/widgets/custom_slider.dart';
 
@@ -36,21 +37,26 @@ class _TimelineState extends State<Timeline> {
               Text(
                 trackTimeProvider.formatDuration(_currentValue),
                 style: const TextStyle(
-                  fontSize: 15,
-                  color: Colors.amber
+                  fontSize: 11,
+                  color: unfocusedElementColor,
+                  fontFamily: 'CircularSp-Book'
                 ),
               ),
+              const SizedBox(width: 8,),
               CustomSlider(
                 startValue: const Duration(minutes: 0, seconds: 0),
                 endValue: const Duration(minutes: 3, seconds: 40),
                 currentValue: _currentValue,
                 onChanged: _handleSliderChanged,
+                width: MediaQuery.of(context).size.width / 3,
               ),
+              const SizedBox(width: 8,),
               Text(
                 trackTimeProvider.formatDuration(const Duration(minutes: 3, seconds: 40)),
                 style: const TextStyle(
-                  fontSize: 15,
-                  color: Colors.amber
+                  fontSize: 11,
+                  color: unfocusedElementColor,
+                  fontFamily: 'CircularSp-Book'
                 ),
               ),
             ],

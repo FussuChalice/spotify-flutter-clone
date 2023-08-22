@@ -44,7 +44,7 @@ class _CustomSliderState extends State<CustomSlider> {
             trackHeight: 4,
             thumbColor: Colors.white,
             activeTrackColor: _hovered ? clickedIconColor : Colors.white,
-            inactiveTrackColor: unfocusedElementColor,
+            inactiveTrackColor: Colors.white,
             overlayColor: Colors.transparent,
             thumbShape: _hovered
                 ? const RoundSliderThumbShape(enabledThumbRadius: 6)
@@ -118,7 +118,7 @@ class CustomTrackShape extends RoundedRectSliderTrackShape {
     );
 
     final Paint inactivePaint = Paint()
-      ..color = unfocusedElementColor;
+      ..color = infoBoxColor;
 
     // Draw the inactive track
     context.canvas.drawRRect(

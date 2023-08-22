@@ -132,6 +132,7 @@ class _PlayerBottomLayoutState extends State<PlayerBottomLayout> {
             Expanded(
               flex: 2,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -151,7 +152,7 @@ class _PlayerBottomLayoutState extends State<PlayerBottomLayout> {
                           },
                           blendMode: BlendMode.modulate,
                           focusedColor: _audioPlayerRandomClicked ? clickedHoveredIconColor: focusedElementColor, 
-                          unfocusedColor: _audioPlayerRandomClicked ? clickedIconColor : unfocusedElementColor, 
+                          unfocusedColor: _audioPlayerRandomClicked ? clickedIconColor : infoBoxColor, 
                           iconButtonHoverFunction: () {}, 
                           iconHeight: 16
                         )
@@ -210,13 +211,14 @@ class _PlayerBottomLayoutState extends State<PlayerBottomLayout> {
                           },
                           blendMode: BlendMode.modulate,
                           focusedColor: _audioPlayerLoopClicked ? clickedHoveredIconColor: focusedElementColor, 
-                          unfocusedColor: _audioPlayerLoopClicked ? clickedIconColor : unfocusedElementColor, 
+                          unfocusedColor: _audioPlayerLoopClicked ? clickedIconColor : infoBoxColor, 
                           iconButtonHoverFunction: () {}, 
                           iconHeight: 16
                         )
                       ),
                     ],
                   ),
+                  const SizedBox(height: 10,),
                   const Timeline(),
                 ],
               ),
