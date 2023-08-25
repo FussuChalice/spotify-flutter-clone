@@ -20,6 +20,12 @@ const String searchUnfocusedIconAsset = "${iconsPath}search_unfocused_icon.png";
 const String audioPlayerAddIconAsset = "${iconsPath}audio_player_add_icon.png";
 const String likeUnfilledIconAsset = "${iconsPath}like_unfilled_icon.png";
 const String likeFilledIconAsset = "${iconsPath}like_filled_icon.png";
+const String screenNowIconAsset = "${iconsPath}screen_now_icon.png";
+const String textIconAsset = "${iconsPath}text_icon.png";
+const String queueIconAsset = "${iconsPath}queue_icon.png";
+const String devicesIconAsset = "${iconsPath}devices_icon.png";
+const String volumeIconAsset = "${iconsPath}volume_icon.png";
+const String volumeMutedIconAsset = "${iconsPath}volume_muted_icon.png"; 
 
 // Images
 const String testImage = "assets/images/test.png";
