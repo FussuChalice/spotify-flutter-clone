@@ -13,7 +13,7 @@ dependencies:
 
   bitsdojo_window: ^0.1.5
   provider: ^6.0.5
-  marquee: ^2.2.3
+  url_launcher: ^6.1.12
 
   cupertino_icons: ^1.0.2
   gettext_i18n: ^1.0.5

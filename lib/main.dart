@@ -115,9 +115,9 @@ class _MyAppState extends State<MyApp> {
                 )
               ),
               const SizedBox(width: 7,),
-              Expanded(
+              const Expanded(
                 flex: 2, 
-                child: homeLayout
+                child: HomeLayout(),
               ),
               const SizedBox(width: 7,),
               Expanded(

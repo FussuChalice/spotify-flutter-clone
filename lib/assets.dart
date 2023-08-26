@@ -25,7 +25,10 @@ const String textIconAsset = "${iconsPath}text_icon.png";
 const String queueIconAsset = "${iconsPath}queue_icon.png";
 const String devicesIconAsset = "${iconsPath}devices_icon.png";
 const String volumeIconAsset = "${iconsPath}volume_icon.png";
-const String volumeMutedIconAsset = "${iconsPath}volume_muted_icon.png"; 
+const String volumeMutedIconAsset = "${iconsPath}volume_muted_icon.png";
+const String leftIconAsset = "${iconsPath}left_icon.png";
+const String rightIconAsset = "${iconsPath}right_icon.png";
+const String personIconAsset = "${iconsPath}person_icon.png";
 
 // Images
 const String testImage = "assets/images/test.png";

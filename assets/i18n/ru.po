@@ -300,6 +300,9 @@ msgstr "Настройки"
 msgid "Previous"
 msgstr "Назад"
 
+msgid "Learn more about Premium"
+msgstr "Узнать больше о Premium"
+
 msgid "Private Session"
 msgstr "Приватный режим"
 

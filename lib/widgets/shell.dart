@@ -6,11 +6,15 @@ class Shell extends StatefulWidget {
     super.key,
     required this.child,
     this.height,
-    this.width
+    this.width,
+    this.backgroundColor = shellColor,
+    this.backgroundGradient
   });
 
   final Widget child;
   final double? width, height;
+  final Color backgroundColor;
+  final Gradient? backgroundGradient;
 
   @override
   State<Shell> createState() => _ShellState();
@@ -21,7 +25,8 @@ class _ShellState extends State<Shell> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: shellColor,
+        color: widget.backgroundColor,
+        gradient: widget.backgroundGradient,
         borderRadius: BorderRadius.circular(10)
       ),
       width: widget.width,

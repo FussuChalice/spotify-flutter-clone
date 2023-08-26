@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
+typedef WhiteElevatedButtonCallback = void Function();
+
 class WhiteElevatedButton extends StatefulWidget {
-  const WhiteElevatedButton({super.key, required this.elevatedButtonText});
+  const WhiteElevatedButton({super.key, required this.elevatedButtonText, required this.callback});
 
   final Text elevatedButtonText;
+  final WhiteElevatedButtonCallback callback;
 
   @override
   State<WhiteElevatedButton> createState() => _CustomWhiteElevatedButtonState();
@@ -20,9 +23,7 @@ class _CustomWhiteElevatedButtonState extends State<WhiteElevatedButton> {
       child: SizedBox(
         height: 32,
         child: ElevatedButton(
-          onPressed: () {
-            // Do something when the button is pressed
-          },
+          onPressed: widget.callback,
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.resolveWith<Color>(
               (states) {

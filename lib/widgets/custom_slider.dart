@@ -78,9 +78,9 @@ class _CustomSliderState extends State<CustomSlider> {
 }
 
 class CustomTrackShape extends RoundedRectSliderTrackShape {
-  final bool hovered; // Add a boolean property to receive _hovered value
+  final bool hovered;
 
-  CustomTrackShape(this.hovered); // Constructor to initialize hovered
+  CustomTrackShape(this.hovered);
 
   @override
   Rect getPreferredRect({
@@ -102,14 +102,15 @@ class CustomTrackShape extends RoundedRectSliderTrackShape {
     PaintingContext context,
     Offset offset, {
     required RenderBox parentBox,
-    required SliderThemeData sliderTheme,
-    required Animation<double> enableAnimation,
-    required TextDirection textDirection,
     required Offset thumbCenter,
-    bool isDiscrete = false,
+    required Animation<double> enableAnimation,
+    required SliderThemeData sliderTheme,
+    required TextDirection textDirection,
     bool isEnabled = false,
+    bool isDiscrete = false,
     double additionalActiveTrackHeight = 0,
     double additionalInactiveTrackHeight = 0,
+    Offset? secondaryOffset,
   }) {
     final Rect trackRect = getPreferredRect(
       parentBox: parentBox,
@@ -128,7 +129,6 @@ class CustomTrackShape extends RoundedRectSliderTrackShape {
 
     // Draw the active track
     if (isEnabled) {
-      final double trackLength = trackRect.width;
       final double thumbRadius = sliderTheme.thumbShape!.getPreferredSize(isEnabled, isDiscrete).width / 2;
 
       final activeTrackRect = Rect.fromLTRB(trackRect.left, trackRect.top, thumbCenter.dx - thumbRadius, trackRect.bottom);
