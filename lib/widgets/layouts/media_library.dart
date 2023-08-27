@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_flutter/assets.dart';
 import 'package:spotify_flutter/colors.dart';
+import 'package:spotify_flutter/font_controller.dart';
+import 'package:spotify_flutter/fonts.dart';
 import 'package:spotify_flutter/providers.dart';
 import 'package:spotify_flutter/widgets/info_box.dart';
 import 'package:spotify_flutter/widgets/shell.dart';
@@ -27,6 +29,14 @@ class _MediaLibraryLayoutState extends State<MediaLibraryLayout> {
   @override
   Widget build(BuildContext context) {
     final menuModeProvider = Provider.of<MenuModeProvider>(context);
+    
+    FontController fontController = FontController(
+      context.t("Home"),
+      latinFonts,
+      cyrillicFonts
+    );
+
+    FontList currentFontList = fontController.getFontList();
 
     return Expanded(
         child: Shell(
@@ -79,7 +89,7 @@ class _MediaLibraryLayoutState extends State<MediaLibraryLayout> {
                               (Text(
                                 context.t("Your Library"),
                                 style: TextStyle(
-                                  fontFamily: "CircularSp",
+                                  fontFamily: currentFontList.bold,
                                   fontSize: 16,
                                   color: _mediaLibraryHovered
                                       ? focusedElementColor
@@ -179,7 +189,7 @@ class _MediaLibraryLayoutState extends State<MediaLibraryLayout> {
                         callback: () {},
                         elevatedButtonText: Text(
                           context.t("New Playlist"),
-                          style: const TextStyle(fontFamily: 'CircularSp'),
+                          style: TextStyle(fontFamily: currentFontList.bold),
                         ))),
               ))),
         if (widget.mode == 0)
@@ -195,7 +205,7 @@ class _MediaLibraryLayoutState extends State<MediaLibraryLayout> {
                       callback: () {},
                       elevatedButtonText: Text(
                         context.t("Browse podcasts"),
-                        style: const TextStyle(fontFamily: 'CircularSp'),
+                        style: TextStyle(fontFamily: currentFontList.bold),
                       ))),
             ),
           )),

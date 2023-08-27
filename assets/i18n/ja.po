@@ -27,6 +27,12 @@ msgstr "ホーム"
 msgid "&Delete"
 msgstr "削除(&D)"
 
+msgid "Good morning"
+msgstr "おはようございます"
+
+msgid "Good evening"
+msgstr "こんばんは"
+
 msgid "It's easy, we'll help you"
 msgstr "作り方は簡単。私たちがお手伝いします"
 

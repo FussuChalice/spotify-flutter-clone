@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:spotify_flutter/assets.dart';
 import 'package:gettext_i18n/gettext_i18n.dart';
 import 'package:spotify_flutter/colors.dart';
+import 'package:spotify_flutter/font_controller.dart';
+import 'package:spotify_flutter/fonts.dart';
 import 'package:spotify_flutter/widgets/shell.dart';
 
 class TopLeftMenuLayout extends StatefulWidget {
@@ -19,8 +21,18 @@ class _TopLeftMenuLayoutState extends State<TopLeftMenuLayout> {
   bool _homeHovered = false;
   bool _searchHovered = false;
 
+
   @override
   Widget build(BuildContext context) {
+    FontController fontController = FontController(
+      context.t("Home"),
+      latinFonts,
+      cyrillicFonts
+    );
+
+    FontList currentFontList = fontController.getFontList();
+
+
     return Shell(
       height: 112,
       child: Padding(
@@ -60,7 +72,7 @@ class _TopLeftMenuLayoutState extends State<TopLeftMenuLayout> {
                           context.t("Home"),
                           style: TextStyle(
                             color: _selectedOption == "home" || _homeHovered ? focusedElementColor : unfocusedElementColor,
-                            fontFamily: 'CircularSp',
+                            fontFamily: currentFontList.bold,
                             fontSize: 16
                           ),
                         )
@@ -103,7 +115,7 @@ class _TopLeftMenuLayoutState extends State<TopLeftMenuLayout> {
                           context.t("Search"),
                           style: TextStyle(
                             color: _selectedOption == "search" || _searchHovered ? focusedElementColor : unfocusedElementColor,
-                            fontFamily: 'CircularSp',
+                            fontFamily: currentFontList.bold,
                             fontSize: 16
                           ),
                         )

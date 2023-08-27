@@ -7,3 +7,4 @@ Future<void> utilLaunchUrl(Uri uri) async {
   
   await launchUrl(uri);
 }
+

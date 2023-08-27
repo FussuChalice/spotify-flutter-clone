@@ -5,9 +5,9 @@ import 'package:spotify_flutter/widgets/custom_icon_button.dart';
 
 class PlayerBottomSongInfo extends StatefulWidget {
   const PlayerBottomSongInfo({
-    super.key, required this.songTitle, required this.songAuthor, required this.imagePath});
+    super.key, required this.songTitle, required this.songAuthor, required this.imageURL});
 
-  final String songTitle, songAuthor, imagePath;
+  final String songTitle, songAuthor, imageURL;
 
   @override
   State<PlayerBottomSongInfo> createState() => _PlayerBottomSongInfoState();
@@ -29,8 +29,8 @@ class _PlayerBottomSongInfoState extends State<PlayerBottomSongInfo> {
           ClipRRect(
             borderRadius: BorderRadius.circular(
                 3), // Half of the height or width to create a circle effect
-            child: Image.asset(
-              widget.imagePath,
+            child: Image.network(
+              widget.imageURL,
               height: 56,
               width: 56,
               fit: BoxFit.cover, // You can adjust the fit as needed

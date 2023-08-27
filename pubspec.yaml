@@ -15,6 +15,7 @@ dependencies:
   provider: ^6.0.5
   url_launcher: ^6.1.12
   flutter_launcher_icons: ^0.13.1
+  intl: ^0.18.1
 
   cupertino_icons: ^1.0.2
   gettext_i18n: ^1.0.5
@@ -46,10 +47,19 @@ flutter:
     - assets/i18n/
 
   fonts:
-    - family: CircularSp
+    - family: CircularSp-Bold
+      fonts:
+        - asset: assets/fonts/CircularSp-Bold.ttf
+
+    - family: CircularSp-Cyrl-Bold
       fonts:
         - asset: assets/fonts/CircularSp-Cyrl-Bold.ttf
+
     - family: CircularSp-Book
+      fonts:
+        - asset: assets/fonts/CircularSp-Book.ttf
+
+    - family: CircularSp-Cyrl-Book
       fonts:
         - asset: assets/fonts/CircularSp-Cyrl-Book.ttf
 

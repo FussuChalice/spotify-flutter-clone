@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_flutter/colors.dart';
+import 'package:spotify_flutter/font_controller.dart';
+import 'package:spotify_flutter/fonts.dart';
 import 'package:spotify_flutter/widgets/white_elevated_button.dart';
+import 'package:gettext_i18n/gettext_i18n.dart';
 
 class InfoBox extends StatefulWidget {
   const InfoBox({
@@ -18,8 +21,17 @@ class InfoBox extends StatefulWidget {
 }
 
 class _InfoBoxState extends State<InfoBox> {
+
   @override
   Widget build(BuildContext context) {
+    FontController fontController = FontController(
+      widget.headerText,
+      latinFonts,
+      cyrillicFonts
+    );
+
+    FontList currentFontList = fontController.getFontList();
+
     return Container(
       decoration: BoxDecoration(
         color: infoBoxColor,
@@ -33,9 +45,9 @@ class _InfoBoxState extends State<InfoBox> {
             Text(
               widget.headerText,
               textAlign: TextAlign.start,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.white,
-                fontFamily: 'CircularSp',
+                fontFamily: currentFontList.bold,
                 fontSize: 16,
               ),
             ),
@@ -45,10 +57,10 @@ class _InfoBoxState extends State<InfoBox> {
             Text(
               widget.paragraphText,
               textAlign: TextAlign.start,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.white,
                 fontSize: 15,
-                fontFamily: 'CircularSp-Book'
+                fontFamily: currentFontList.book
               ),
             ),
             const SizedBox(

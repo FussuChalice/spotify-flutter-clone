@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_flutter/assets.dart';
 import 'package:spotify_flutter/widgets/layouts/player_bottom_buttons.dart';
 import 'package:spotify_flutter/widgets/layouts/player_bottom_controls.dart';
 import 'package:spotify_flutter/widgets/layouts/player_bottom_song_info.dart';
@@ -28,7 +27,7 @@ class _PlayerBottomLayoutState extends State<PlayerBottomLayout> {
             PlayerBottomSongInfo(
               songTitle: "Test Song", 
               songAuthor: "Kuntura", 
-              imagePath: testImage
+              imageURL: "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"
             ),
             PlayerBottomControls(),
             PlayerBottomButtons(),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_flutter/assets.dart';
 import 'package:spotify_flutter/colors.dart';
+import 'package:spotify_flutter/font_controller.dart';
+import 'package:spotify_flutter/fonts.dart';
 import 'package:spotify_flutter/utilites.dart';
 import 'package:spotify_flutter/widgets/custom_circle_box.dart';
 import 'package:spotify_flutter/widgets/white_elevated_button.dart';
@@ -18,8 +20,17 @@ class HomeTopBox extends StatefulWidget {
 }
 
 class _HomeTopBoxState extends State<HomeTopBox> {
+
   @override
   Widget build(BuildContext context) {
+    FontController fontController = FontController(
+      context.t("Home"),
+      latinFonts,
+      cyrillicFonts
+    );
+
+    FontList currentFontList = fontController.getFontList();
+
     return Container(
       height: 64,
       decoration: BoxDecoration(
@@ -71,7 +82,7 @@ class _HomeTopBoxState extends State<HomeTopBox> {
                   WhiteElevatedButton(
                     elevatedButtonText: Text(
                         context.t("Learn more about Premium"),
-                        style: const TextStyle(fontFamily: 'CircularSp')),
+                        style: TextStyle(fontFamily: currentFontList.bold)),
                     callback: () async {
                       await utilLaunchUrl(
                           Uri.parse("https://www.spotify.com/premium/"));

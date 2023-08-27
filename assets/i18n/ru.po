@@ -151,6 +151,12 @@ msgstr ""
 msgid "Audio Files"
 msgstr "Аудио"
 
+msgid "Good morning"
+msgstr "Доброе утро"
+
+msgid "Good evening"
+msgstr "Добрый вечер"
+
 msgid "Bring All to Front"
 msgstr "Показать все окна"
 
@@ -302,6 +308,8 @@ msgstr "Назад"
 
 msgid "Learn more about Premium"
 msgstr "Узнать больше о Premium"
+
+
 
 msgid "Private Session"
 msgstr "Приватный режим"
