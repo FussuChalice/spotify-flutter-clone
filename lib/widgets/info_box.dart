@@ -3,7 +3,6 @@ import 'package:spotify_flutter/colors.dart';
 import 'package:spotify_flutter/font_controller.dart';
 import 'package:spotify_flutter/fonts.dart';
 import 'package:spotify_flutter/widgets/white_elevated_button.dart';
-import 'package:gettext_i18n/gettext_i18n.dart';
 
 class InfoBox extends StatefulWidget {
   const InfoBox({
