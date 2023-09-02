@@ -14,3 +14,9 @@ Whether you have Premium or not, you can:
 - And more!
 
 [Official webisite link](https://www.spotify.com/free/)
+
+# History of the creation of the project
+|№ |   SCREENSHOTS     |   DESCRIPTION |
+|:-:|:-----------------:|:-------------:|
+|1|![screenshot_0](./screenshots/0.png)|  I have created a black box with three dots. For this I used bitsdojo_window. Also added the initial structure of the application, etc. |
+|2|![screenshot_1](./screenshots/1.png)| Added player interface and localization, and again a lot of things. |
