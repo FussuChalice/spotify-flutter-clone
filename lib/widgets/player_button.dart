@@ -4,27 +4,29 @@ typedef PlayerButtonCallback = void Function();
 
 class PlayerButton extends StatefulWidget {
   const PlayerButton({
-    super.key, 
-    required this.startFunction, 
-    required this.stopFunction, 
-    required this.buttonIsClicked, 
-    required this.playerButtonColor, 
+    Key? key,
+    required this.startFunction,
+    required this.stopFunction,
+    required this.buttonIsClicked,
+    required this.playerButtonColor,
     required this.playerButtonHoveredColor,
-    required this.height,
-    required this.width,
+    required this.iconSize,
+    required this.imageSize,
     required this.startPlayerButtonIconPath,
-    required this.stopPlayerButtonIconPath
-  });
+    required this.stopPlayerButtonIconPath,
+    this.padding = const EdgeInsets.all(7.0), // Add a default value for padding
+  }) : super(key: key);
 
   final PlayerButtonCallback startFunction;
   final PlayerButtonCallback stopFunction;
   final bool buttonIsClicked;
   final Color playerButtonColor;
   final Color playerButtonHoveredColor;
-  final double width;
-  final double height;
+  final double iconSize;
+  final double imageSize;
   final String startPlayerButtonIconPath;
   final String stopPlayerButtonIconPath;
+  final EdgeInsetsGeometry padding; // Add the padding property
 
   @override
   State<PlayerButton> createState() => _PlayerButtonState();
@@ -54,14 +56,15 @@ class _PlayerButtonState extends State<PlayerButton> {
             shape: BoxShape.circle,
             color: _buttonHovered ? widget.playerButtonHoveredColor : widget.playerButtonColor,
           ),
-          height: widget.height,
-          width: widget.width,
+          height: widget.iconSize,
+          width: widget.iconSize,
           child: Padding(
-            padding: const EdgeInsets.all(7.0), // Adjust the padding as needed
+            padding: widget.padding, // Use the specified padding
             child: Image.asset(
               widget.buttonIsClicked ? widget.stopPlayerButtonIconPath : widget.startPlayerButtonIconPath,
-              height: 16,
-              fit: BoxFit.fitHeight, // Maintain aspect ratio and fit inside the padding
+              height: widget.imageSize,
+              width: widget.imageSize,
+              fit: BoxFit.fill,
             ),
           ),
         ),

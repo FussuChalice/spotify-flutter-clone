@@ -90,10 +90,10 @@ class _MyAppState extends State<MyApp> {
           child: Row(
             children: [
               if (menuMode == 0) (
-                Expanded(
+                const Expanded(
                   flex: 1,
                   child: Column(
-                    children: const [
+                    children: [
                       TopLeftMenuLayout(mode: 0,),
                       SizedBox(height: 7,),
                       MediaLibraryLayout(
@@ -103,10 +103,10 @@ class _MyAppState extends State<MyApp> {
                   ),
                 )
               ) else (
-                SizedBox(
+                const SizedBox(
                   width: 72,
                   child: Column(
-                    children: const [
+                    children: [
                       TopLeftMenuLayout(mode: 1,),
                       SizedBox(height: 7,),
                       MediaLibraryLayout(mode: 1,),

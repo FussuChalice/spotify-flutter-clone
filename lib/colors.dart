@@ -27,6 +27,9 @@ const Color clickedIconColor = Color.fromRGBO(28, 202, 90, 1);
 /// The color of icons when clicked and hovered.
 const Color clickedHoveredIconColor = Color.fromRGBO(33, 233, 103, 1);
 
+/// The color of section card.
+const Color sectionCardColor = Color(0xFF282828);
+
 /// Window button colors for various states.
 final windowButtonColors = WindowButtonColors(
   iconNormal: Colors.white,

@@ -5,6 +5,7 @@ import 'package:spotify_flutter/fonts.dart';
 import 'package:spotify_flutter/widgets/album_card.dart';
 import 'package:spotify_flutter/widgets/home_delimiter.dart';
 import 'package:spotify_flutter/widgets/layouts/home_top_box.dart';
+import 'package:spotify_flutter/widgets/sections_card.dart';
 import 'package:spotify_flutter/widgets/shell.dart';
 import 'package:gettext_i18n/gettext_i18n.dart';
 
@@ -58,7 +59,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                     ),
                   ),
                 ),
-                const Row(
+                Row(
                   children: [
                     Expanded(
                         child: Padding(
@@ -66,10 +67,12 @@ class _HomeLayoutState extends State<HomeLayout> {
                       child: Column(
                         children: [
                           AlbumCard(
+                              callback: () {},
                               albumTitle: "Камнем по голове",
                               albumImageURL:
                                   "https://i.scdn.co/image/ab67616d0000b2730c3b892ae60740e164855765"),
                           AlbumCard(
+                              callback: () {},
                               albumTitle: "Король и Шут",
                               albumImageURL:
                                   "https://i.scdn.co/image/ab6761610000e5eb8581bbea73df6ff1812ceb48"),
@@ -82,10 +85,12 @@ class _HomeLayoutState extends State<HomeLayout> {
                       child: Column(
                         children: [
                           AlbumCard(
+                              callback: () {},
                               albumTitle: "Кино",
                               albumImageURL:
                                   "https://i.scdn.co/image/ab676161000051740f9e913afb90d4b58b6e8ebb"),
                           AlbumCard(
+                              callback: () {},
                               albumTitle: "Океан Ельзи",
                               albumImageURL:
                                   "https://i.scdn.co/image/ab6761610000517474dc4165fcbf068a5a9ede6f"),
@@ -94,11 +99,33 @@ class _HomeLayoutState extends State<HomeLayout> {
                     )),
                   ],
                 ),
-                const SizedBox(height: 30,),
+                const SizedBox(
+                  height: 30,
+                ),
                 HomeDelimiter(
-                  headerText: "Популярно у слушателей: Короче, история", 
-                  showButtonText: "Показать все", 
-                  callback: () {}
+                    headerText: "Популярно у слушателей: Короче, история",
+                    showButtonText: "Показать все",
+                    callback: () {}),
+                Row(
+                  children: [
+                    SectionCard(
+                      roundImage: false,
+                      showPlayerButton: true,
+                      mainImageURL: "https://i.scdn.co/image/ab67656300005f1fadc64dcc7edccd2ee6b63118", 
+                      headerText: "«Доступная история»", 
+                      paragraphText: "Ярослав", 
+                      callback: () {}
+                    ),
+                    const SizedBox(width: 16,),
+                    SectionCard(
+                      roundImage: false,
+                      showPlayerButton: true,
+                      mainImageURL: "https://i.scdn.co/image/ab67656300005f1fadc64dcc7edccd2ee6b63118", 
+                      headerText: "«Доступная история»", 
+                      paragraphText: "Ярослав", 
+                      callback: () {}
+                    ),
+                  ],
                 )
               ],
             ),

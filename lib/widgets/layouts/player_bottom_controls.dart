@@ -79,8 +79,8 @@ class _PlayerBottomControlsState extends State<PlayerBottomControls> {
                   buttonIsClicked: _audioPlayerStarted,
                   playerButtonColor: Colors.white,
                   playerButtonHoveredColor: Colors.white,
-                  height: 32,
-                  width: 32,
+                  iconSize: 32,
+                  imageSize: 16,
                   startPlayerButtonIconPath: audioPlayerStartIcon,
                   stopPlayerButtonIconPath: audioPlayerStopIcon),
               const SizedBox(

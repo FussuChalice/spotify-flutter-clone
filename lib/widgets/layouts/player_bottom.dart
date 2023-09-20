@@ -25,9 +25,9 @@ class _PlayerBottomLayoutState extends State<PlayerBottomLayout> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             PlayerBottomSongInfo(
-              songTitle: "Test Song", 
-              songAuthor: "Kuntura", 
-              imageURL: "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"
+              songTitle: "Утрений расвет", 
+              songAuthor: "Король и Шут", 
+              imageURL: "https://i.scdn.co/image/ab67616d0000b273ab541c8fff5dbd3d496e97ee"
             ),
             PlayerBottomControls(),
             PlayerBottomButtons(),
