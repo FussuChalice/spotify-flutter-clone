@@ -70,12 +70,12 @@ class _HomeLayoutState extends State<HomeLayout> {
                               callback: () {},
                               albumTitle: "Камнем по голове",
                               albumImageURL:
-                                  "https://i.scdn.co/image/ab67616d0000b2730c3b892ae60740e164855765"),
+                                  "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"),
                           AlbumCard(
                               callback: () {},
                               albumTitle: "Король и Шут",
                               albumImageURL:
-                                  "https://i.scdn.co/image/ab6761610000e5eb8581bbea73df6ff1812ceb48"),
+                                  "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"),
                         ],
                       ),
                     )),
@@ -88,12 +88,12 @@ class _HomeLayoutState extends State<HomeLayout> {
                               callback: () {},
                               albumTitle: "Кино",
                               albumImageURL:
-                                  "https://i.scdn.co/image/ab676161000051740f9e913afb90d4b58b6e8ebb"),
+                                  "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"),
                           AlbumCard(
                               callback: () {},
                               albumTitle: "Океан Ельзи",
                               albumImageURL:
-                                  "https://i.scdn.co/image/ab6761610000517474dc4165fcbf068a5a9ede6f"),
+                                  "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"),
                         ],
                       ),
                     )),
@@ -111,22 +111,61 @@ class _HomeLayoutState extends State<HomeLayout> {
                     SectionCard(
                       roundImage: false,
                       showPlayerButton: true,
-                      mainImageURL: "https://i.scdn.co/image/ab67656300005f1fadc64dcc7edccd2ee6b63118", 
+                      mainImageURL: "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228", 
                       headerText: "«Доступная история»", 
                       paragraphText: "Ярослав", 
                       callback: () {}
                     ),
                     const SizedBox(width: 16,),
+                  ],
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                HomeDelimiter(
+                  headerText: "Любимие исполнители",
+                  showButtonText: "Показать все",
+                  callback: () {}),
+                Row(
+                  children: [
                     SectionCard(
-                      roundImage: false,
+                      roundImage: true,
                       showPlayerButton: true,
-                      mainImageURL: "https://i.scdn.co/image/ab67656300005f1fadc64dcc7edccd2ee6b63118", 
-                      headerText: "«Доступная история»", 
-                      paragraphText: "Ярослав", 
+                      mainImageURL: "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228", 
+                      headerText: "ДДТ", 
+                      paragraphText: "Исполнитель", 
                       callback: () {}
                     ),
+                    const SizedBox(width: 16,),
+                    SectionCard(
+                      roundImage: true,
+                      showPlayerButton: true,
+                      mainImageURL: "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228", 
+                      headerText: "Земфира", 
+                      paragraphText: "Исполнитель", 
+                      callback: () {}
+                    ),
+                    const SizedBox(width: 16,),
+                    SectionCard(
+                      roundImage: true,
+                      showPlayerButton: true,
+                      mainImageURL: "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228", 
+                      headerText: "AC/DC", 
+                      paragraphText: "Исполнитель", 
+                      callback: () {}
+                    ),
+                    const SizedBox(width: 16,),
+                    SectionCard(
+                      roundImage: true,
+                      showPlayerButton: true,
+                      mainImageURL: "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228", 
+                      headerText: "Король и Шут", 
+                      paragraphText: "Исполнитель", 
+                      callback: () {}
+                    ),
+                    const SizedBox(width: 16,),
                   ],
-                )
+                ),
               ],
             ),
           )))

@@ -21,3 +21,4 @@ Whether you have Premium or not, you can:
 |1|![screenshot_0](./screenshots/0.png)|  I have created a black box with three dots. For this I used bitsdojo_window. Also added the initial structure of the application, etc. |
 |2|![screenshot_1](./screenshots/1.png)| Added player interface and localization, and again a lot of things. |
 |3|![screenshot_2](./screenshots/2.png)| Added section card for home screen. |
+|4|![screenshot_2](./screenshots/3.png)| Nothing new |

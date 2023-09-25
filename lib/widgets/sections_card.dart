@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gettext_i18n/gettext_i18n.dart';
 import 'package:spotify_flutter/assets.dart';
 import 'package:spotify_flutter/colors.dart';
 import 'package:spotify_flutter/font_controller.dart';
@@ -34,7 +33,7 @@ class _SectionCardState extends State<SectionCard> {
   @override
   Widget build(BuildContext context) {
     FontController fontController =
-        FontController(context.t("Home"), latinFonts, cyrillicFonts);
+        FontController(widget.headerText, latinFonts, cyrillicFonts);
 
     FontList currentFontList = fontController.getFontList();
 
@@ -77,7 +76,7 @@ class _SectionCardState extends State<SectionCard> {
                     width: containerWidth,
                     height: containerWidth,
                     decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(Radius.circular(5)),
+                      borderRadius: widget.roundImage ? BorderRadius.all(Radius.circular(containerWidth / 2)) : const BorderRadius.all(Radius.circular(10)) ,
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.3), // Shadow color
