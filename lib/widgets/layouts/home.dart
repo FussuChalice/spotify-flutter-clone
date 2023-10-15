@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:spotify_flutter/colors.dart';
 import 'package:spotify_flutter/font_controller.dart';
 import 'package:spotify_flutter/fonts.dart';
+import 'package:spotify_flutter/network/network_loader.dart';
 import 'package:spotify_flutter/widgets/album_card.dart';
 import 'package:spotify_flutter/widgets/home_delimiter.dart';
 import 'package:spotify_flutter/widgets/layouts/home_top_box.dart';
 import 'package:spotify_flutter/widgets/sections_card.dart';
 import 'package:spotify_flutter/widgets/shell.dart';
 import 'package:gettext_i18n/gettext_i18n.dart';
+
+import 'package:spotify_flutter/static.dart' as static_net_data;
+import 'package:spotify_flutter/network/models/album.dart' as album_model;
+// import 'package:spotify_flutter/network/models/artist.dart' as artist_model;
 
 class HomeLayout extends StatefulWidget {
   const HomeLayout({super.key});
@@ -17,6 +22,37 @@ class HomeLayout extends StatefulWidget {
 }
 
 class _HomeLayoutState extends State<HomeLayout> {
+  late List<Future<album_model.Album>> firstAlbumCouple;
+  late List<Future<album_model.Album>> secondAlbumCouple;
+  // late List<Future<artist_model.Artist>> artists;
+
+  NetworkLoader networkLoader = NetworkLoader(
+    {"Authorization": "Bearer  BQCDrZcG4s6mqJSuxmgrOBXdY7DyGR_ieQqoQ3eHz8TTpSHCqbhvbQHwSfXx2k9ydJJ4HvbLv8TibMfvFAsycb6NRs-oCSaU5xzgxmQO4CN7iV4Nc9s"}
+  );
+
+  @override
+  void initState() {
+    super.initState();
+
+    List<Future<album_model.Album>> preloadedFirstAlbumCouple = [];
+    List<Future<album_model.Album>> preloadedSecondAlbumCouple = [];
+    // List<Future<artist_model.Artist>> preloadedArtists = [];
+
+    for (int i = 0; i < 2; i++) 
+    {preloadedFirstAlbumCouple.add(networkLoader.fetchAlbum(static_net_data.ALBUM_LOAD_IDS[i]));}
+
+    for (int i = 2; i < 4; i++) 
+    {preloadedSecondAlbumCouple.add(networkLoader.fetchAlbum(static_net_data.ALBUM_LOAD_IDS[i]));}
+
+    firstAlbumCouple = preloadedFirstAlbumCouple;
+    secondAlbumCouple = preloadedSecondAlbumCouple;
+
+    // for (var id in static_net_data.ARTISTS_LOAD_IDS) {
+    //   preloadedArtists.add(networkLoader.fetchArtist(id)); 
+    // }
+  }
+
+
   @override
   Widget build(BuildContext context) {
     FontController fontController =
@@ -63,38 +99,54 @@ class _HomeLayoutState extends State<HomeLayout> {
                   children: [
                     Expanded(
                         child: Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: Column(
-                        children: [
-                          AlbumCard(
-                              callback: () {},
-                              albumTitle: "Камнем по голове",
-                              albumImageURL:
-                                  "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"),
-                          AlbumCard(
-                              callback: () {},
-                              albumTitle: "Король и Шут",
-                              albumImageURL:
-                                  "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"),
-                        ],
+                      padding: const EdgeInsets.only(right: 10),
+                      child: FutureBuilder<List<album_model.Album>>(
+                        future: Future.wait(firstAlbumCouple),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            List<album_model.Album> futureAlbumList = snapshot.data ?? [];
+
+                            return Column(
+                              children: futureAlbumList.map((album) {
+                                return AlbumCard(
+                                  albumTitle: album.name ?? "Album Name", 
+                                  albumImageURL: album.images?[0].url ?? "Album image", 
+                                  callback: () {}
+                                );
+                              }).toList(),
+                            );
+                          } else if (snapshot.hasError) {
+                            return Text('${snapshot.error}');
+                          }
+
+                          return const SizedBox(height: 74,);
+                        },
                       ),
                     )),
                     Expanded(
                         child: Padding(
                       padding: EdgeInsets.only(left: 10),
-                      child: Column(
-                        children: [
-                          AlbumCard(
-                              callback: () {},
-                              albumTitle: "Кино",
-                              albumImageURL:
-                                  "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"),
-                          AlbumCard(
-                              callback: () {},
-                              albumTitle: "Океан Ельзи",
-                              albumImageURL:
-                                  "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"),
-                        ],
+                      child: FutureBuilder<List<album_model.Album>>(
+                        future: Future.wait(secondAlbumCouple),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            List<album_model.Album> futureAlbumList = snapshot.data ?? [];
+
+                            return Column(
+                              children: futureAlbumList.map((album) {
+                                return AlbumCard(
+                                  albumTitle: album.name ?? "Album Name", 
+                                  albumImageURL: album.images?[0].url ?? "Album image", 
+                                  callback: () {}
+                                );
+                              }).toList(),
+                            );
+                          } else if (snapshot.hasError) {
+                            return Text('${snapshot.error}');
+                          }
+
+                          return const SizedBox(height: 74,);
+                        },
                       ),
                     )),
                   ],

@@ -13,7 +13,18 @@ Whether you have Premium or not, you can:
 - Build collections of music and podcasts
 - And more!
 
-[Official webisite link](https://www.spotify.com/free/)
+## Start project
+1. Get Flutter ```>=3.0.0 <4.0.0```
+2. Run commands
+    ```bash
+    # Get all dependencies
+    flutter pub get
+    ```
+3. Generate auth token, for connect to Spotify API. Token works one hour. Run [./generate_spotify_access_token.sh](./generate_spotify_access_token.sh).
+4. After you have new file: ```spotify_access_token.json```. Open there and copy token to ```lib/layouts/home.dart```
+
+
+[Official Spotify website](https://www.spotify.com/free/)
 
 # History of the creation of the project
 |№ |   SCREENSHOTS     |   DESCRIPTION |
@@ -21,4 +32,3 @@ Whether you have Premium or not, you can:
 |1|![screenshot_0](./screenshots/0.png)|  I have created a black box with three dots. For this I used bitsdojo_window. Also added the initial structure of the application, etc. |
 |2|![screenshot_1](./screenshots/1.png)| Added player interface and localization, and again a lot of things. |
 |3|![screenshot_2](./screenshots/2.png)| Added section card for home screen. |
-|4|![screenshot_2](./screenshots/3.png)| Nothing new |
