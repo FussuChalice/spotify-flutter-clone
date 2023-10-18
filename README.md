@@ -25,8 +25,8 @@ Whether you have Premium or not, you can:
     # Get all dependencies
     flutter pub get
     ```
-3. Generate auth token, for connect to Spotify API. Token works one hour. Run [./generate_spotify_access_token.sh](./generate_spotify_access_token.sh).
-4. After you have new file: ```spotify_access_token.json```. Open there and copy token to ```lib/layouts/home.dart```
+3. Run [replace_to_spotify_keys.sh](/replace_to_spotify_keys.sh) to replace ```<your client id>``` and ```<your client secret>``` to your Spotify Keys.
+Spotify Keys you can get on: https://developer.spotify.com/dashboard
 
 
 [Official Spotify website](https://www.spotify.com/free/)

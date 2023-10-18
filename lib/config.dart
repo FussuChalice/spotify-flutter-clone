@@ -1,2 +1,2 @@
-String CLIENT_ID = '0fa761327b7a4787a964cea122c160f4';
-String CLIENT_SECRET = '4e6cf52288654385a4a28ff3769d5e65';
+String CLIENT_ID = '<your client id>';
+String CLIENT_SECRET = '<your client id>';
