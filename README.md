@@ -1,4 +1,9 @@
 # spotify-flutter-clone
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/y/FussuChalice/spotify-flutter-clone)
+![GitHub](https://img.shields.io/github/license/FussuChalice/spotify-flutter-clone)
+![GitHub repo file count (file type)](https://img.shields.io/github/directory-file-count/FussuChalice/spotify-flutter-clone)
+
+
 Spotify App Clone on flutter (Unofficial)
 ![clone](https://storage.googleapis.com/pr-newsroom-wp/1/2021/03/Client-X-static-banner-single-desktop.png)
 

@@ -12,9 +12,11 @@ dependencies:
   provider: ^6.0.5
   http: ^1.1.0
   url_launcher: ^6.1.12
+  hive_flutter: ^1.1.0
+  shelf: ^1.4.1
+  logger: ^2.0.2+1
   flutter_launcher_icons: ^0.13.1
   intl: ^0.18.1
-  cupertino_icons: ^1.0.2
   gettext_i18n: ^1.0.5
   flutter_localizations:
     sdk: flutter
