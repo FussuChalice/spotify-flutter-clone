@@ -18,6 +18,24 @@ With or without Premium, you can:
 - Curate collections of your favorite music and podcasts.
 - And much more!
 
+### Key Features
+
+- Mimics the look and feel of the official Spotify app.
+- Provides a user-friendly and intuitive music playback experience.
+- Supports the creation of playlists and the discovery of new music.
+- Enables users to explore and enjoy their favorite podcasts.
+
+## Get Involved
+
+We encourage developers and enthusiasts to get involved in this project. Whether you want to contribute code, improve the user interface, or assist with documentation, your contributions are welcome. Please check out our [Contribution Guidelines](CONTRIBUTE.md) for more information on how to get started.
+
+Join us in creating an open-source Spotify Clone that showcases the capabilities of the Flutter framework and offers a fun and educational development experience. Let's build a music streaming app together!
+
+### Disclaimer
+
+This project is an educational endeavor and is not affiliated with Spotify in any way. It does not provide access to Spotify's official content or APIs. Any Spotify branding, logos, or trademarks are used for illustrative purposes only.
+
+
 ## Getting Started
 
 1. Make sure you have Flutter installed (version `>=3.0.0 <4.0.0`).
@@ -29,6 +47,3 @@ flutter pub get
 ```
 
 Use the [replace_to_spotify_keys.sh](replace_to_spotify_keys.sh) script to replace <your client id> and <your client secret> with your [Spotify Developer Keys](https://developer.spotify.com/dashboard). You can obtain your Spotify Keys from [Spotify Developer Dashboard](https://developer.spotify.com/dashboard).
-
-# Contribute
-We welcome contributions to enhance and improve the Spotify Flutter Clone project. If you'd like to contribute, please refer to our [Contribution Guidelines](CONTRIBUTE.md) for more details on how to get started.
