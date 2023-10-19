@@ -24,7 +24,7 @@ cd spotify-clone-flutter
 flutter pub get
 ```
 
-4. Run the ![replace_to_spotify_keys.sh](replace_to_spotify_keys.sh) script to replace <your client id> and <your client secret> with your Spotify Developer keys. You can obtain these keys by visiting the Spotify Developer Dashboard.
+4. Run the [replace_to_spotify_keys.sh](replace_to_spotify_keys.sh) script to replace <your client id> and <your client secret> with your Spotify Developer keys. You can obtain these keys by visiting the Spotify Developer Dashboard.
 
 ## Making Contributions
 You can contribute in various ways, such as by adding new features, fixing bugs, improving documentation, or enhancing the user interface. Please ensure that your contributions follow these guidelines:
