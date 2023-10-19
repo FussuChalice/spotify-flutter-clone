@@ -1,39 +1,34 @@
-# spotify-flutter-clone
+# Spotify Flutter Clone
+
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/y/FussuChalice/spotify-flutter-clone)
 ![GitHub](https://img.shields.io/github/license/FussuChalice/spotify-flutter-clone)
 ![GitHub repo file count (file type)](https://img.shields.io/github/directory-file-count/FussuChalice/spotify-flutter-clone)
 
+A Flutter-based Unofficial Spotify App Clone
 
-Spotify App Clone on flutter (Unofficial)
-![clone](https://storage.googleapis.com/pr-newsroom-wp/1/2021/03/Client-X-static-banner-single-desktop.png)
+![Spotify Clone](https://storage.googleapis.com/pr-newsroom-wp/1/2021/03/Client-X-static-banner-single-desktop.png)
 
 ## What is Spotify?
-Spotify is a digital music, podcast, and video service that gives you access to millions of songs and other content from creators all over the world.
 
-Basic functions such as playing music are totally free, but you can also choose to upgrade to Spotify Premium.
+Spotify is a digital music, podcast, and video service that offers access to millions of songs and content created by artists worldwide. Enjoy basic features like playing music for free, or choose to upgrade to Spotify Premium.
 
-Whether you have Premium or not, you can:
+With or without Premium, you can:
 
-- Get recommendations based on your taste
-- Build collections of music and podcasts
-- And more!
+- Receive personalized music recommendations based on your taste.
+- Curate collections of your favorite music and podcasts.
+- And much more!
 
-## Start project
-1. Get Flutter ```>=3.0.0 <4.0.0```
-2. Run commands
-    ```bash
-    # Get all dependencies
-    flutter pub get
-    ```
-3. Run [replace_to_spotify_keys.sh](/replace_to_spotify_keys.sh) to replace ```<your client id>``` and ```<your client secret>``` to your Spotify Keys.
-Spotify Keys you can get on: https://developer.spotify.com/dashboard
+## Getting Started
 
+1. Make sure you have Flutter installed (version `>=3.0.0 <4.0.0`).
+2. Run the following commands:
 
-[Official Spotify website](https://www.spotify.com/free/)
+```bash
+# Get all project dependencies
+flutter pub get
+```
 
-# History of the creation of the project
-|№ |   SCREENSHOTS     |   DESCRIPTION |
-|:-:|:-----------------:|:-------------:|
-|1|![screenshot_0](./screenshots/0.png)|  I have created a black box with three dots. For this I used bitsdojo_window. Also added the initial structure of the application, etc. |
-|2|![screenshot_1](./screenshots/1.png)| Added player interface and localization, and again a lot of things. |
-|3|![screenshot_2](./screenshots/2.png)| Added section card for home screen. |
+Use the [replace_to_spotify_keys.sh](replace_to_spotify_keys.sh) script to replace <your client id> and <your client secret> with your [Spotify Developer Keys](https://developer.spotify.com/dashboard). You can obtain your Spotify Keys from [Spotify Developer Dashboard](https://developer.spotify.com/dashboard).
+
+# Contribute
+We welcome contributions to enhance and improve the Spotify Flutter Clone project. If you'd like to contribute, please refer to our [Contribution Guidelines](CONTRIBUTE.md) for more details on how to get started.
