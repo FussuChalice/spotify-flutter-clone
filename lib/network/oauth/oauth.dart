@@ -105,7 +105,7 @@ class SpotifyOAuth {
   /// This method constructs the authorization URL with the required parameters and opens it in the default web browser.
   Future<void> launchAuthorizationUrl() async {
     String state = generateRandomString(16);
-    String scope = 'user-read-private user-read-email';
+    String scope = 'user-read-private user-read-email user-library-read';
     String redirectUri = 'http://localhost:$serverPort/callback';
 
     final Uri _url = Uri.parse(

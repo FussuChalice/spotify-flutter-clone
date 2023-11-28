@@ -37,8 +37,12 @@ void main() async{
   await Hive.initFlutter();
   var settingsBox = await Hive.openBox('settings');
 
-  if (!settingsBox.containsKey('userAuth')) {
+  if (!settingsBox.containsKey("userAuth") 
+  || settingsBox.get("userAuth").toString().contains("error")) {
+    
     SpotifyOAuth oauth = SpotifyOAuth(CLIENT_ID, 3030, CLIENT_SECRET);
     oauth.init();
   }
+
+  // print(settingsBox.get("userAuth").toString());
 }

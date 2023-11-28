@@ -27,7 +27,7 @@ class _HomeLayoutState extends State<HomeLayout> {
   // late List<Future<artist_model.Artist>> artists;
 
   NetworkLoader networkLoader = NetworkLoader(
-    {"Authorization": "Bearer  <spotify access token>"}
+    {"Authorization": "Bearer  BQBLKy19sddUjCfGJYEUU9NnhU0as6d7e-qt3g0W026R7m9HmUq-DG8D7a4LcgtOMCbEZk2j_Utp5-5DPNX7WTcCrgwuv8oWoLvStpR7fq4C1OBhx2U"}
   );
 
   @override
