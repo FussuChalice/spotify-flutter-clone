@@ -4,6 +4,8 @@ import './models/artist_s_top_tracks.dart' as artist_s_top_tracks;
 import './models/album.dart' as album;
 import './models/artist.dart' as artist;
 import './models/show.dart' as show;
+import './models/personilized_content/UserSavedAlbum.dart' as user_saved_album;
+import './models/personilized_content/UserSavedTracks.dart' as user_saved_tracks;
 
 /// A class for making network requests to the Spotify Web API to fetch various types of data.
 class NetworkLoader {
@@ -96,5 +98,51 @@ class NetworkLoader {
     } else {
       throw Exception('Failed to load show');
     }
+  }
+
+
+  /// Fetches user's saved albums with optional offset and market parameters.
+  ///
+  /// This method retrieves a list of user's saved albums with optional offset and market parameters.
+  ///
+  /// [offset] - The index of the first saved album to return. Use with [market] to get the next set of saved albums.
+  /// [market] - An optional parameter representing the market for which to retrieve the saved albums.
+  ///
+  /// Returns an instance of [user_saved_album.UserSavedAlbum] if the request is successful.
+  /// Throws an exception with an error message if the request fails.
+  Future<user_saved_album.UserSavedAlbum> fetchUserSavedAlbum(int offset, String market) async {
+      final response = await http.get(
+          Uri.parse('https://api.spotify.com/v1/me/albums/?offset=$offset&market=$market'),
+          headers: requestHeaders
+      );
+
+      if (response.statusCode == 200) {
+        return user_saved_album.userSavedAlbumFromJson(response.body);
+      } else {
+        throw Exception('Failed to load user saved album');
+      }
+  }
+  
+
+  /// Fetches user's saved tracks with optional offset and market parameters.
+  ///
+  /// This method retrieves a list of user's saved tracks with optional offset and market parameters.
+  ///
+  /// [offset] - The index of the first saved track to return. Use with [market] to get the next set of saved tracks.
+  /// [market] - An optional parameter representing the market for which to retrieve the saved tracks.
+  ///
+  /// Returns an instance of [user_saved_tracks.UserSavedTracks] if the request is successful.
+  /// Throws an exception with an error message if the request fails.
+  Future<user_saved_tracks.UserSavedTracks> fetchUserSavedTrack(int offset, String market) async {
+      final response = await http.get(
+          Uri.parse('https://api.spotify.com/v1/me/tracks/?offset=$offset&market=$market'),
+          headers: requestHeaders
+      );
+
+      if (response.statusCode == 200) {
+        return user_saved_tracks.userSavedTracksFromJson(response.body);
+      } else {
+        throw Exception('Failed to load user saved track');
+      }
   }
 }
