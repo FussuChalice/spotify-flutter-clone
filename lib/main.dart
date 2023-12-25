@@ -9,6 +9,16 @@ import 'package:spotify_flutter/providers.dart';
 import 'package:spotify_flutter/spotify_app.dart';
 
 
+Future<void> initAuthorization(Box<dynamic> settingsBox) async {
+  
+  SpotifyOAuth oauth = SpotifyOAuth(CLIENT_ID, 3030, CLIENT_SECRET);
+    oauth.init();
+
+    DateTime currentTime = DateTime.now();
+    await settingsBox.put("startTime", currentTime);
+}
+
+
 void main() async{
   runApp(
     MultiProvider(
@@ -39,9 +49,12 @@ void main() async{
 
   if (!settingsBox.containsKey("userAuth") 
   || settingsBox.get("userAuth").toString().contains("error")) {
-    
-    SpotifyOAuth oauth = SpotifyOAuth(CLIENT_ID, 3030, CLIENT_SECRET);
-    oauth.init();
+    await initAuthorization(settingsBox);
+  }
+
+  else if (settingsBox.get("startTime") == null 
+  || DateTime.now().difference(settingsBox.get("startTime")).inSeconds > 3600) {
+    await initAuthorization(settingsBox);
   }
 
   // print(settingsBox.get("userAuth").toString());

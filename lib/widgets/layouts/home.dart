@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:spotify_flutter/colors.dart';
 import 'package:spotify_flutter/font_controller.dart';
 import 'package:spotify_flutter/fonts.dart';
@@ -10,8 +11,10 @@ import 'package:spotify_flutter/widgets/sections_card.dart';
 import 'package:spotify_flutter/widgets/shell.dart';
 import 'package:gettext_i18n/gettext_i18n.dart';
 
-import 'package:spotify_flutter/static.dart' as static_net_data;
+// import 'package:spotify_flutter/static.dart' as static_net_data;
 import 'package:spotify_flutter/network/models/album.dart' as album_model;
+import 'package:spotify_flutter/oauth.dart' as oauth;
+import 'package:spotify_flutter/network/models/personilized_content/UserCurrentProfile.dart' as user_current_profile;
 // import 'package:spotify_flutter/network/models/artist.dart' as artist_model;
 
 class HomeLayout extends StatefulWidget {
@@ -22,34 +25,52 @@ class HomeLayout extends StatefulWidget {
 }
 
 class _HomeLayoutState extends State<HomeLayout> {
-  late List<Future<album_model.Album>> firstAlbumCouple;
-  late List<Future<album_model.Album>> secondAlbumCouple;
+  // late List<Future<album_model.Album>> firstAlbumCouple;
+  // late List<Future<album_model.Album>> secondAlbumCouple;
   // late List<Future<artist_model.Artist>> artists;
 
-  NetworkLoader networkLoader = NetworkLoader(
-    {"Authorization": "Bearer  BQBLKy19sddUjCfGJYEUU9NnhU0as6d7e-qt3g0W026R7m9HmUq-DG8D7a4LcgtOMCbEZk2j_Utp5-5DPNX7WTcCrgwuv8oWoLvStpR7fq4C1OBhx2U"}
-  );
+  late NetworkLoader networkLoader;
 
   @override
   void initState() {
     super.initState();
+    initializeNetworkLoader();
 
-    List<Future<album_model.Album>> preloadedFirstAlbumCouple = [];
-    List<Future<album_model.Album>> preloadedSecondAlbumCouple = [];
-    // List<Future<artist_model.Artist>> preloadedArtists = [];
+    // List<Future<album_model.Album>> preloadedFirstAlbumCouple = [];
+    // List<Future<album_model.Album>> preloadedSecondAlbumCouple = [];
+    // // List<Future<artist_model.Artist>> preloadedArtists = [];
 
-    for (int i = 0; i < 2; i++) 
-    {preloadedFirstAlbumCouple.add(networkLoader.fetchAlbum(static_net_data.ALBUM_LOAD_IDS[i]));}
+    // for (int i = 0; i < 2; i++) 
+    // {preloadedFirstAlbumCouple.add(networkLoader.fetchAlbum(static_net_data.ALBUM_LOAD_IDS[i]));}
 
-    for (int i = 2; i < 4; i++) 
-    {preloadedSecondAlbumCouple.add(networkLoader.fetchAlbum(static_net_data.ALBUM_LOAD_IDS[i]));}
+    // for (int i = 2; i < 4; i++) 
+    // {preloadedSecondAlbumCouple.add(networkLoader.fetchAlbum(static_net_data.ALBUM_LOAD_IDS[i]));}
 
-    firstAlbumCouple = preloadedFirstAlbumCouple;
-    secondAlbumCouple = preloadedSecondAlbumCouple;
+    // firstAlbumCouple = preloadedFirstAlbumCouple;
+    // secondAlbumCouple = preloadedSecondAlbumCouple;
 
     // for (var id in static_net_data.ARTISTS_LOAD_IDS) {
     //   preloadedArtists.add(networkLoader.fetchArtist(id)); 
     // }
+  }
+
+  Future<void> initializeNetworkLoader() async {
+    await Hive.initFlutter();
+    var settingsBox = await Hive.openBox('settings');
+
+    oauth.OAuthAccessToken accessToken = oauth.oAuthAccessTokenFromJson(settingsBox.get("userAuth"));
+
+    networkLoader = NetworkLoader({
+      "Authorization": 'Bearer ${accessToken.accessToken.toString()}'
+    });
+
+    await loadNetworkData();
+  }
+
+  Future<void> loadNetworkData() async {
+    user_current_profile.UserCurrentProfile userCurrentProfile = await networkLoader.fetchUserCurrentProfile();
+
+    print(userCurrentProfile.toJson().toString());
   }
 
 
@@ -95,62 +116,62 @@ class _HomeLayoutState extends State<HomeLayout> {
                     ),
                   ),
                 ),
-                Row(
-                  children: [
-                    Expanded(
-                        child: Padding(
-                      padding: const EdgeInsets.only(right: 10),
-                      child: FutureBuilder<List<album_model.Album>>(
-                        future: Future.wait(firstAlbumCouple),
-                        builder: (context, snapshot) {
-                          if (snapshot.hasData) {
-                            List<album_model.Album> futureAlbumList = snapshot.data ?? [];
+                // Row(
+                //   children: [
+                //     Expanded(
+                //         child: Padding(
+                //       padding: const EdgeInsets.only(right: 10),
+                //       child: FutureBuilder<List<album_model.Album>>(
+                //         future: Future.wait(firstAlbumCouple),
+                //         builder: (context, snapshot) {
+                //           if (snapshot.hasData) {
+                //             List<album_model.Album> futureAlbumList = snapshot.data ?? [];
 
-                            return Column(
-                              children: futureAlbumList.map((album) {
-                                return AlbumCard(
-                                  albumTitle: album.name ?? "Album Name", 
-                                  albumImageURL: album.images?[0].url ?? "Album image", 
-                                  callback: () {}
-                                );
-                              }).toList(),
-                            );
-                          } else if (snapshot.hasError) {
-                            return Text('${snapshot.error}');
-                          }
+                //             return Column(
+                //               children: futureAlbumList.map((album) {
+                //                 return AlbumCard(
+                //                   albumTitle: album.name ?? "Album Name", 
+                //                   albumImageURL: album.images?[0].url ?? "Album image", 
+                //                   callback: () {}
+                //                 );
+                //               }).toList(),
+                //             );
+                //           } else if (snapshot.hasError) {
+                //             return Text('${snapshot.error}');
+                //           }
 
-                          return const SizedBox(height: 74,);
-                        },
-                      ),
-                    )),
-                    Expanded(
-                        child: Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: FutureBuilder<List<album_model.Album>>(
-                        future: Future.wait(secondAlbumCouple),
-                        builder: (context, snapshot) {
-                          if (snapshot.hasData) {
-                            List<album_model.Album> futureAlbumList = snapshot.data ?? [];
+                //           return const SizedBox(height: 74,);
+                //         },
+                //       ),
+                //     )),
+                //     Expanded(
+                //         child: Padding(
+                //       padding: EdgeInsets.only(left: 10),
+                //       child: FutureBuilder<List<album_model.Album>>(
+                //         future: Future.wait(secondAlbumCouple),
+                //         builder: (context, snapshot) {
+                //           if (snapshot.hasData) {
+                //             List<album_model.Album> futureAlbumList = snapshot.data ?? [];
 
-                            return Column(
-                              children: futureAlbumList.map((album) {
-                                return AlbumCard(
-                                  albumTitle: album.name ?? "Album Name", 
-                                  albumImageURL: album.images?[0].url ?? "Album image", 
-                                  callback: () {}
-                                );
-                              }).toList(),
-                            );
-                          } else if (snapshot.hasError) {
-                            return Text('${snapshot.error}');
-                          }
+                //             return Column(
+                //               children: futureAlbumList.map((album) {
+                //                 return AlbumCard(
+                //                   albumTitle: album.name ?? "Album Name", 
+                //                   albumImageURL: album.images?[0].url ?? "Album image", 
+                //                   callback: () {}
+                //                 );
+                //               }).toList(),
+                //             );
+                //           } else if (snapshot.hasError) {
+                //             return Text('${snapshot.error}');
+                //           }
 
-                          return const SizedBox(height: 74,);
-                        },
-                      ),
-                    )),
-                  ],
-                ),
+                //           return const SizedBox(height: 74,);
+                //         },
+                //       ),
+                //     )),
+                //   ],
+                // ),
                 const SizedBox(
                   height: 30,
                 ),

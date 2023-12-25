@@ -9,44 +9,44 @@ UserCurrentProfile userCurrentProfileFromJson(String str) => UserCurrentProfile.
 String userCurrentProfileToJson(UserCurrentProfile data) => json.encode(data.toJson());
 
 class UserCurrentProfile {
-    String country;
-    String displayName;
-    String email;
-    ExplicitContent explicitContent;
-    ExternalUrls externalUrls;
-    Followers followers;
-    String href;
-    String id;
-    List<Image> images;
-    String product;
-    String type;
-    String uri;
+    String? country;
+    String? displayName;
+    String? email;
+    ExplicitContent? explicitContent;
+    ExternalUrls? externalUrls;
+    Followers? followers;
+    String? href;
+    String? id;
+    List<Image>? images;
+    String? product;
+    String? type;
+    String? uri;
 
     UserCurrentProfile({
-        required this.country,
-        required this.displayName,
-        required this.email,
-        required this.explicitContent,
-        required this.externalUrls,
-        required this.followers,
-        required this.href,
-        required this.id,
-        required this.images,
-        required this.product,
-        required this.type,
-        required this.uri,
+        this.country,
+        this.displayName,
+        this.email,
+        this.explicitContent,
+        this.externalUrls,
+        this.followers,
+        this.href,
+        this.id,
+        this.images,
+        this.product,
+        this.type,
+        this.uri,
     });
 
     factory UserCurrentProfile.fromJson(Map<String, dynamic> json) => UserCurrentProfile(
         country: json["country"],
         displayName: json["display_name"],
         email: json["email"],
-        explicitContent: ExplicitContent.fromJson(json["explicit_content"]),
-        externalUrls: ExternalUrls.fromJson(json["external_urls"]),
-        followers: Followers.fromJson(json["followers"]),
+        explicitContent: json["explicit_content"] == null ? null : ExplicitContent.fromJson(json["explicit_content"]),
+        externalUrls: json["external_urls"] == null ? null : ExternalUrls.fromJson(json["external_urls"]),
+        followers: json["followers"] == null ? null : Followers.fromJson(json["followers"]),
         href: json["href"],
         id: json["id"],
-        images: List<Image>.from(json["images"].map((x) => Image.fromJson(x))),
+        images: json["images"] == null ? [] : List<Image>.from(json["images"]!.map((x) => Image.fromJson(x))),
         product: json["product"],
         type: json["type"],
         uri: json["uri"],
@@ -56,12 +56,12 @@ class UserCurrentProfile {
         "country": country,
         "display_name": displayName,
         "email": email,
-        "explicit_content": explicitContent.toJson(),
-        "external_urls": externalUrls.toJson(),
-        "followers": followers.toJson(),
+        "explicit_content": explicitContent?.toJson(),
+        "external_urls": externalUrls?.toJson(),
+        "followers": followers?.toJson(),
         "href": href,
         "id": id,
-        "images": List<dynamic>.from(images.map((x) => x.toJson())),
+        "images": images == null ? [] : List<dynamic>.from(images!.map((x) => x.toJson())),
         "product": product,
         "type": type,
         "uri": uri,
@@ -69,12 +69,12 @@ class UserCurrentProfile {
 }
 
 class ExplicitContent {
-    bool filterEnabled;
-    bool filterLocked;
+    bool? filterEnabled;
+    bool? filterLocked;
 
     ExplicitContent({
-        required this.filterEnabled,
-        required this.filterLocked,
+        this.filterEnabled,
+        this.filterLocked,
     });
 
     factory ExplicitContent.fromJson(Map<String, dynamic> json) => ExplicitContent(
@@ -89,10 +89,10 @@ class ExplicitContent {
 }
 
 class ExternalUrls {
-    String spotify;
+    String? spotify;
 
     ExternalUrls({
-        required this.spotify,
+        this.spotify,
     });
 
     factory ExternalUrls.fromJson(Map<String, dynamic> json) => ExternalUrls(
@@ -105,12 +105,12 @@ class ExternalUrls {
 }
 
 class Followers {
-    String href;
-    int total;
+    String? href;
+    int? total;
 
     Followers({
-        required this.href,
-        required this.total,
+        this.href,
+        this.total,
     });
 
     factory Followers.fromJson(Map<String, dynamic> json) => Followers(
@@ -125,14 +125,14 @@ class Followers {
 }
 
 class Image {
-    String url;
-    int height;
-    int width;
+    String? url;
+    int? height;
+    int? width;
 
     Image({
-        required this.url,
-        required this.height,
-        required this.width,
+        this.url,
+        this.height,
+        this.width,
     });
 
     factory Image.fromJson(Map<String, dynamic> json) => Image(
