@@ -6,6 +6,7 @@ import './models/artist.dart' as artist;
 import './models/show.dart' as show;
 import './models/personilized_content/UserSavedAlbum.dart' as user_saved_album;
 import './models/personilized_content/UserSavedTracks.dart' as user_saved_tracks;
+import './models/personilized_content/UserCurrentProfile.dart' as user_current_profile;
 
 /// A class for making network requests to the Spotify Web API to fetch various types of data.
 class NetworkLoader {
@@ -37,6 +38,7 @@ class NetworkLoader {
     }
   }
 
+
   /// Fetches details of a specific album.
   ///
   /// This method retrieves detailed information about a specific album using its unique identifier.
@@ -58,6 +60,7 @@ class NetworkLoader {
     }
   }
 
+
   /// Fetches details of a specific artist.
   ///
   /// This method retrieves detailed information about a specific artist using their unique identifier.
@@ -78,6 +81,7 @@ class NetworkLoader {
       throw Exception('Failed to load artist');
     }
   }
+
 
   /// Fetches details of a specific show.
   ///
@@ -147,5 +151,24 @@ class NetworkLoader {
   }
 
 
-  
+  /// Fetches the current user's profile information from Spotify.
+  ///
+  /// This method retrieves the current user's profile information.
+  ///
+  /// Returns an instance of [user_current_profile.UserCurrentProfile] if the request is successful.
+  /// Throws an exception with an error message if the request fails.
+  Future<user_current_profile.UserCurrentProfile> fetchUserCurrentProfile() async {
+      final response = await http.get(
+          Uri.parse('https://api.spotify.com/v1/me'),
+          headers: requestHeaders
+      );
+
+      if (response.statusCode == 200) {
+        return user_current_profile.userCurrentProfileFromJson(response.body);
+      } else {
+        throw Exception('Failed to fetch user current profile');
+      }
+  }
+
+
 }
