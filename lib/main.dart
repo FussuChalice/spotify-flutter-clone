@@ -47,7 +47,7 @@ void main() async{
   await Hive.initFlutter();
   var settingsBox = await Hive.openBox('settings');
 
-  if (!settingsBox.containsKey("userAuth") 
+  if (settingsBox.containsKey("userAuth") 
   || settingsBox.get("userAuth").toString().contains("error")) {
     await initAuthorization(settingsBox);
   }
@@ -56,6 +56,7 @@ void main() async{
   || DateTime.now().difference(settingsBox.get("startTime")).inSeconds > 3600) {
     await initAuthorization(settingsBox);
   }
+
 
   // print(settingsBox.get("userAuth").toString());
 }

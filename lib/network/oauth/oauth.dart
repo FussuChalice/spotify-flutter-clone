@@ -3,11 +3,13 @@ import 'dart:math';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:logger/logger.dart';
+// import 'package:logger/logger.dart';
 import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart' as shelf_io;
 import 'package:spotify_flutter/network/oauth/auth_options.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import './resources.dart';
 
 /// This class facilitates OAuth2.0 authorization with the Spotify Web API using the Authorization Code Flow.
 ///
@@ -62,11 +64,11 @@ class SpotifyOAuth {
           url: 'https://accounts.spotify.com/api/token'
         );
 
-      Logger().i(options.toJson().toString());
+      // Logger().i(options.toJson().toString());
 
       _getAccessToken(options);
 
-      return Response.ok('');
+      return Response.ok(OAuth2Resources.callbackHTML, headers: {'Content-Type': 'text/html'});
     } else {
       return Response(404);
     }
@@ -83,7 +85,7 @@ class SpotifyOAuth {
       headers: options.headers,
     );
 
-    Logger().i(response.body);
+    // Logger().i(response.body);
 
     var savedUserBox = await Hive.openBox('settings');
     savedUserBox.put('userAuth', response.body);

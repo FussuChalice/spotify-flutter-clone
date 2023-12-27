@@ -11,11 +11,10 @@ import 'package:spotify_flutter/widgets/sections_card.dart';
 import 'package:spotify_flutter/widgets/shell.dart';
 import 'package:gettext_i18n/gettext_i18n.dart';
 
-// import 'package:spotify_flutter/static.dart' as static_net_data;
+import 'package:spotify_flutter/static.dart' as static_net_data;
 import 'package:spotify_flutter/network/models/album.dart' as album_model;
+// import 'package:spotify_flutter/network/models/show.dart' as show_model;
 import 'package:spotify_flutter/oauth.dart' as oauth;
-import 'package:spotify_flutter/network/models/personilized_content/UserCurrentProfile.dart' as user_current_profile;
-// import 'package:spotify_flutter/network/models/artist.dart' as artist_model;
 
 class HomeLayout extends StatefulWidget {
   const HomeLayout({super.key});
@@ -25,8 +24,9 @@ class HomeLayout extends StatefulWidget {
 }
 
 class _HomeLayoutState extends State<HomeLayout> {
-  // late List<Future<album_model.Album>> firstAlbumCouple;
-  // late List<Future<album_model.Album>> secondAlbumCouple;
+  late List<Future<album_model.Album>> firstAlbumCouple = [];
+  late List<Future<album_model.Album>> secondAlbumCouple = [];
+  // late List<Future<show_model.Show>> showCouple = [];
   // late List<Future<artist_model.Artist>> artists;
 
   late NetworkLoader networkLoader;
@@ -35,23 +35,6 @@ class _HomeLayoutState extends State<HomeLayout> {
   void initState() {
     super.initState();
     initializeNetworkLoader();
-
-    // List<Future<album_model.Album>> preloadedFirstAlbumCouple = [];
-    // List<Future<album_model.Album>> preloadedSecondAlbumCouple = [];
-    // // List<Future<artist_model.Artist>> preloadedArtists = [];
-
-    // for (int i = 0; i < 2; i++) 
-    // {preloadedFirstAlbumCouple.add(networkLoader.fetchAlbum(static_net_data.ALBUM_LOAD_IDS[i]));}
-
-    // for (int i = 2; i < 4; i++) 
-    // {preloadedSecondAlbumCouple.add(networkLoader.fetchAlbum(static_net_data.ALBUM_LOAD_IDS[i]));}
-
-    // firstAlbumCouple = preloadedFirstAlbumCouple;
-    // secondAlbumCouple = preloadedSecondAlbumCouple;
-
-    // for (var id in static_net_data.ARTISTS_LOAD_IDS) {
-    //   preloadedArtists.add(networkLoader.fetchArtist(id)); 
-    // }
   }
 
   Future<void> initializeNetworkLoader() async {
@@ -68,9 +51,22 @@ class _HomeLayoutState extends State<HomeLayout> {
   }
 
   Future<void> loadNetworkData() async {
-    user_current_profile.UserCurrentProfile userCurrentProfile = await networkLoader.fetchUserCurrentProfile();
+    List<Future<album_model.Album>> preloadedFirstAlbumCouple   = [];
+    List<Future<album_model.Album>> preloadedSecondAlbumCouple  = [];
+    // List<Future<show_model.Show>>   preloadedShowCouple         = [];
 
-    print(userCurrentProfile.toJson().toString());
+    for (int i = 0; i < 2; i++) 
+    {preloadedFirstAlbumCouple.add(networkLoader.fetchAlbum(static_net_data.ALBUM_LOAD_IDS[i]));}
+
+    for (int i = 2; i < 4; i++) 
+    {preloadedSecondAlbumCouple.add(networkLoader.fetchAlbum(static_net_data.ALBUM_LOAD_IDS[i]));}
+
+    // for (int i = 0; i < 4; i++)
+    // {preloadedShowCouple.add(networkLoader.fetchShow(static_net_data.SHOW_LOAD_IDS[i]));}
+
+    firstAlbumCouple  = preloadedFirstAlbumCouple;
+    secondAlbumCouple = preloadedSecondAlbumCouple;
+    // showCouple        = preloadedShowCouple;
   }
 
 
@@ -116,62 +112,62 @@ class _HomeLayoutState extends State<HomeLayout> {
                     ),
                   ),
                 ),
-                // Row(
-                //   children: [
-                //     Expanded(
-                //         child: Padding(
-                //       padding: const EdgeInsets.only(right: 10),
-                //       child: FutureBuilder<List<album_model.Album>>(
-                //         future: Future.wait(firstAlbumCouple),
-                //         builder: (context, snapshot) {
-                //           if (snapshot.hasData) {
-                //             List<album_model.Album> futureAlbumList = snapshot.data ?? [];
+                Row(
+                  children: [
+                    Expanded(
+                        child: Padding(
+                      padding: const EdgeInsets.only(right: 10),
+                      child: FutureBuilder<List<album_model.Album>>(
+                        future: Future.wait(firstAlbumCouple),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            List<album_model.Album> futureAlbumList = snapshot.data ?? [];
 
-                //             return Column(
-                //               children: futureAlbumList.map((album) {
-                //                 return AlbumCard(
-                //                   albumTitle: album.name ?? "Album Name", 
-                //                   albumImageURL: album.images?[0].url ?? "Album image", 
-                //                   callback: () {}
-                //                 );
-                //               }).toList(),
-                //             );
-                //           } else if (snapshot.hasError) {
-                //             return Text('${snapshot.error}');
-                //           }
+                            return Column(
+                              children: futureAlbumList.map((album) {
+                                return AlbumCard(
+                                  albumTitle: album.name ?? "Album Name", 
+                                  albumImageURL: album.images?[0].url ?? "Album image", 
+                                  callback: () {}
+                                );
+                              }).toList(),
+                            );
+                          } else if (snapshot.hasError) {
+                            return Text('${snapshot.error}');
+                          }
 
-                //           return const SizedBox(height: 74,);
-                //         },
-                //       ),
-                //     )),
-                //     Expanded(
-                //         child: Padding(
-                //       padding: EdgeInsets.only(left: 10),
-                //       child: FutureBuilder<List<album_model.Album>>(
-                //         future: Future.wait(secondAlbumCouple),
-                //         builder: (context, snapshot) {
-                //           if (snapshot.hasData) {
-                //             List<album_model.Album> futureAlbumList = snapshot.data ?? [];
+                          return const SizedBox(height: 74,);
+                        },
+                      ),
+                    )),
+                    Expanded(
+                        child: Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: FutureBuilder<List<album_model.Album>>(
+                        future: Future.wait(secondAlbumCouple),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            List<album_model.Album> futureAlbumList = snapshot.data ?? [];
 
-                //             return Column(
-                //               children: futureAlbumList.map((album) {
-                //                 return AlbumCard(
-                //                   albumTitle: album.name ?? "Album Name", 
-                //                   albumImageURL: album.images?[0].url ?? "Album image", 
-                //                   callback: () {}
-                //                 );
-                //               }).toList(),
-                //             );
-                //           } else if (snapshot.hasError) {
-                //             return Text('${snapshot.error}');
-                //           }
+                            return Column(
+                              children: futureAlbumList.map((album) {
+                                return AlbumCard(
+                                  albumTitle: album.name ?? "Album Name", 
+                                  albumImageURL: album.images?[0].url ?? "Album image", 
+                                  callback: () {}
+                                );
+                              }).toList(),
+                            );
+                          } else if (snapshot.hasError) {
+                            return Text('${snapshot.error}');
+                          }
 
-                //           return const SizedBox(height: 74,);
-                //         },
-                //       ),
-                //     )),
-                //   ],
-                // ),
+                          return const SizedBox(height: 74,);
+                        },
+                      ),
+                    )),
+                  ],
+                ),
                 const SizedBox(
                   height: 30,
                 ),
@@ -179,19 +175,45 @@ class _HomeLayoutState extends State<HomeLayout> {
                     headerText: "Популярно у слушателей: Короче, история",
                     showButtonText: "Показать все",
                     callback: () {}),
-                Row(
-                  children: [
-                    SectionCard(
-                      roundImage: false,
-                      showPlayerButton: true,
-                      mainImageURL: "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228", 
-                      headerText: "«Доступная история»", 
-                      paragraphText: "Ярослав", 
-                      callback: () {}
-                    ),
-                    const SizedBox(width: 16,),
-                  ],
-                ),
+                // Row(
+                //   children: [
+                //     SectionCard(
+                //       roundImage: false,
+                //       showPlayerButton: true,
+                //       mainImageURL: "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228", 
+                //       headerText: "«Доступная история»", 
+                //       paragraphText: "Ярослав", 
+                //       callback: () {}
+                //     ),
+                //     const SizedBox(width: 16,),
+                //   ],
+                // ),
+                // FutureBuilder<List<show_model.Show>>(
+                //   future: Future.wait(showCouple),
+                //         builder: (context, snapshot) {
+                //           if (snapshot.hasData) {
+                //             print(snapshot.data);
+                //             List<show_model.Show> futureShowList = snapshot.data ?? [];
+
+                //             return Column(
+                //               children: futureShowList.map((show) {
+                //                 return SectionCard(
+                //                   roundImage: false,
+                //                   showPlayerButton: true,
+                //                   mainImageURL: show.images?[0].url ?? " ",
+                //                   headerText: show.name ?? " ",
+                //                   paragraphText: show.description ?? " ",
+                //                   callback: () {},
+                //                 );
+                //               }).toList(),
+                //             );
+
+                //           } else if (snapshot.hasError) {
+                //             return Text('${snapshot.error}');
+                //           }
+
+                //           return const SizedBox(height: 74,);
+                // }),
                 const SizedBox(
                   height: 30,
                 ),

@@ -8,7 +8,7 @@
 ///
 /// The CLIENT_ID is a unique identifier for your application registered with the
 /// authorization server. It is required for authentication and authorization processes.
-/// Make sure to replace '<your client id>' with the actual Client ID assigned to your
+/// Make sure to replace '<your_client_id>' with the actual Client ID assigned to your
 /// application by the OAuth provider.
 String CLIENT_ID = '<your client id>';
 
@@ -16,6 +16,6 @@ String CLIENT_ID = '<your client id>';
 ///
 /// The CLIENT_SECRET is a secret known only to the application and the authorization
 /// server. It is used to authenticate the identity of the application to the server.
-/// Ensure that '<your client secret>' is replaced with the actual Client Secret assigned
+/// Ensure that '<your_client_secret>' is replaced with the actual Client Secret assigned
 /// to your application by the OAuth provider.
 String CLIENT_SECRET = '<your client secret>';

@@ -76,6 +76,7 @@ class _AlbumCardState extends State<AlbumCard> {
                         color: Colors.white,
                         fontFamily: currentFontList.bold,
                         fontSize: 16),
+                    softWrap: true,
                   ),
                 ],
               ),

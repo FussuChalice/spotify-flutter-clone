@@ -8,8 +8,8 @@
 ################################################################################
 
 # Usage:
-#   1. Replace '<your client id>' with your actual Spotify Developer Client ID.
-#   2. Replace '<your client secret>' with your actual Spotify Developer Client Secret.
+#   1. Replace '<your_client_id>' with your actual Spotify Developer Client ID.
+#   2. Replace '<your_client_secret>' with your actual Spotify Developer Client Secret.
 
 # Instructions:
 #   - Visit https://developer.spotify.com/documentation/web-api/tutorials/getting-started
